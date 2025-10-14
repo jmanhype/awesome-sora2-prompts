@@ -1,17 +1,10 @@
-# Animation Prompts 🎨
+# 🎨 Animation Prompts
 
-Stylized, non-realistic aesthetics using creative animation techniques. Focus on artistic expression and unique visual styles.
+Stylized, non-realistic aesthetics using creative animation techniques. Artistic stylization, handcrafted quality, emphasis on design.
 
-## Characteristics
-- Artistic stylization and design
-- Non-realistic rendering techniques
-- Creative animation styles (stop-motion, 2D, 3D stylized)
-- Emphasis on aesthetics over realism
-- Handcrafted or illustrated quality
+**Total Prompts**: 3
 
 ---
-
-## Available Prompts
 
 ### Paper Cutout Forest Journey
 
@@ -19,25 +12,11 @@ Stylized, non-realistic aesthetics using creative animation techniques. Focus on
 
 **Tags**: `animation` `paper-cutout` `forest` `stylized` `stop-motion` `whimsical` `layered` `craft` `handmade` `colorful`
 
-**Camera**: 50mm animation camera | Horizontal tracking with parallax scrolling | Side-view profile, medium shot
+**Camera**: 50mm animation camera lens | smooth horizontal tracking, follows character at constant speed, parallax layers moving at different rates | side-view profile, medium shot showing full character, center composition with environment layers
 
 **Demo**: [Watch on YouTube](https://youtube.com/watch?v=example-paper-forest)
 
 **File**: [`paper-cutout-forest.yaml`](paper-cutout-forest.yaml)
-
----
-
-### Cel-Shaded Samurai Duel
-
-**Summary**: Stylized 3D animation of two samurai warriors in dramatic duel stance, cel-shaded rendering with bold black outlines, anime-inspired aesthetic, dynamic camera movement, vibrant color palette.
-
-**Tags**: `animation` `cel-shaded` `samurai` `action` `anime` `stylized` `bold-linework` `combat` `dynamic` `3D-animation`
-
-**Camera**: 35mm animation camera | Dynamic rotating orbit, quick cuts | Medium to close-up, low angle
-
-**Demo**: [Watch on YouTube](https://youtube.com/watch?v=example-cel-shaded-action)
-
-**File**: [`cel-shaded-action.yaml`](cel-shaded-action.yaml)
 
 ---
 
@@ -47,7 +26,7 @@ Stylized, non-realistic aesthetics using creative animation techniques. Focus on
 
 **Tags**: `animation` `watercolor` `dreamscape` `painted` `soft` `atmospheric` `surreal` `handpainted` `flowing` `artistic`
 
-**Camera**: 50mm animation camera | Slow smooth horizontal tracking | Medium shot, soft focus dreamlike
+**Camera**: 50mm animation camera lens | slow smooth horizontal tracking, organic handheld feel | medium shot, centered figure, soft focus dreamlike
 
 **Demo**: [Watch on YouTube](https://youtube.com/watch?v=example-watercolor-dreamscape)
 
@@ -55,26 +34,21 @@ Stylized, non-realistic aesthetics using creative animation techniques. Focus on
 
 ---
 
-## Contributing
+### Cel-Shaded Samurai Duel
 
-See the main [CONTRIBUTING.md](../../CONTRIBUTING.md) for guidelines on submitting animation prompts.
+**Summary**: Stylized 3D animation of two samurai warriors in dramatic duel stance, cel-shaded rendering with bold black outlines, anime-inspired aesthetic, dynamic camera movement, vibrant color palette with flat shading.
 
-**Animation Category Requirements**:
-- Clear artistic style or animation technique
-- Stylization that's distinctly non-photorealistic
-- Design elements that prioritize aesthetics
-- Creative use of color, shape, or texture
-- Can reference traditional animation methods (cel animation, stop-motion, 2D)
+**Tags**: `animation` `cel-shaded` `samurai` `action` `anime` `stylized` `bold-linework` `combat` `dynamic` `3d-animation`
 
-**Good Examples**:
-- Stop-motion inspired scenes with craft materials
-- Cel-shaded 3D animation with bold linework
-- Watercolor or painted aesthetics
-- Paper craft or collage styles
-- Stylized 3D with artistic rendering
+**Camera**: 35mm animation camera lens | dynamic rotating orbit around characters, quick cuts | medium to close-up, low angle, anime composition
 
-**Avoid**:
-- Photorealistic rendering
-- Generic "3D animation" without style specificity
-- Vague descriptions like "cartoon style" without details
-- Physics-accurate simulations (use hyperrealism instead)
+**Demo**: [Watch on YouTube](https://youtube.com/watch?v=example-cel-shaded-action)
+
+**File**: [`cel-shaded-action.yaml`](cel-shaded-action.yaml)
+
+---
+
+
+---
+
+← [Back to Main README](../../README.md)

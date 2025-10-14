@@ -1,0 +1,21 @@
+# CODEOWNERS - Define code ownership and review requirements
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for everything in the repository
+# These users will be requested for review when anyone opens a pull request
+* @jmanhype
+
+# Schema and validation scripts - require careful review
+/scripts/validate_prompts.py @jmanhype
+/prompt.schema.json @jmanhype
+
+# Prompt content - all YAML files require maintainer review
+/prompts/**/*.yaml @jmanhype
+
+# Documentation and guides
+/guides/ @jmanhype
+/README.md @jmanhype
+/CONTRIBUTING.md @jmanhype
+
+# GitHub workflows and automation
+/.github/ @jmanhype

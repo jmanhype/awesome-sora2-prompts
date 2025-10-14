@@ -1,45 +1,18 @@
-# Hyperrealism Prompts 📸
+# 📸 Hyperrealism Prompts
 
-Photorealistic simulations emphasizing material accuracy and physics. Focus on detail, realism, and natural phenomena.
+Photorealistic simulations with material accuracy and physics. Natural lighting, real-world plausibility, physics-based rendering.
 
-## Characteristics
-- Photorealistic detail and rendering
-- Physics accuracy (materials, forces, dynamics)
-- Natural lighting and reflections
-- Real-world plausibility
-- Material-specific behaviors
-
-**Requirements**: Must include `physics` field with materials and forces.
-
----
-
-## Available Prompts
-
-### Morning Coffee Pour
-
-**Summary**: Extreme close-up of dark coffee being poured into white ceramic mug, steam rising, light refracting through liquid, macro lens capturing every detail in photorealistic quality.
-
-**Tags**: `hyperrealism` `coffee` `steam` `close-up` `macro` `kitchen` `morning` `physics` `liquid` `photorealistic`
-
-**Camera**: 100mm macro | Static tripod shot | Extreme close-up, shallow depth of field
-
-**Physics**: Liquid dynamics, surface tension, steam vapor, light refraction
-
-**Demo**: [Watch on YouTube](https://youtube.com/watch?v=example-morning-coffee)
-
-**File**: [`morning-coffee.yaml`](morning-coffee.yaml)
+**Total Prompts**: 3
 
 ---
 
 ### Urban Glass Architecture Reflection
 
-**Summary**: Extreme detail shot of modern glass skyscraper facade reflecting clouds and sky, perfect geometric patterns, subtle lens distortion, natural daylight, photorealistic material rendering.
+**Summary**: Extreme detail shot of modern glass skyscraper facade reflecting clouds and sky, perfect geometric patterns, subtle lens distortion, natural daylight, photorealistic material rendering of glass, steel, and concrete.
 
 **Tags**: `hyperrealism` `architecture` `glass` `reflection` `urban` `daylight` `modern` `geometric` `photorealistic` `building`
 
-**Camera**: 50mm lens | Slow upward tilt | Close-up to medium shot, geometric composition
-
-**Physics**: Tempered glass, polished chrome steel, natural daylight, atmospheric refraction, mirror reflection
+**Camera**: 50mm lens | slow upward tilt, minimal camera movement | close-up to medium shot, geometric composition
 
 **Demo**: [Watch on YouTube](https://youtube.com/watch?v=example-urban-architecture)
 
@@ -49,13 +22,11 @@ Photorealistic simulations emphasizing material accuracy and physics. Focus on d
 
 ### Ocean Wave Macro Detail
 
-**Summary**: Extreme macro shot of ocean wave crest about to break, water droplets suspended in air, sunlight refracting through translucent water, foam texture detail, physics-accurate fluid dynamics.
+**Summary**: Extreme macro shot of ocean wave crest about to break, water droplets suspended in air, sunlight refracting through translucent water, foam texture detail, physics-accurate fluid dynamics captured at high frame rate.
 
 **Tags**: `hyperrealism` `ocean` `wave` `macro` `water` `physics` `nature` `close-up` `photorealistic` `fluid-dynamics`
 
-**Camera**: 100mm macro | Locked position tracking wave, high-speed slow motion | Extreme close-up
-
-**Physics**: Salt water, air bubbles, surface tension, fluid dynamics, light refraction through water
+**Camera**: 100mm macro lens | locked position tracking wave, high-speed slow motion | extreme close-up, shallow depth of field on crest
 
 **Demo**: [Watch on YouTube](https://youtube.com/watch?v=example-ocean-wave-macro)
 
@@ -63,25 +34,21 @@ Photorealistic simulations emphasizing material accuracy and physics. Focus on d
 
 ---
 
-## Contributing
+### Morning Coffee Pour
 
-See the main [CONTRIBUTING.md](../../CONTRIBUTING.md) for guidelines on submitting hyperrealism prompts.
+**Summary**: Extreme close-up of dark coffee being poured into white ceramic mug, steam rising, light refracting through liquid, macro lens capturing every detail in photorealistic quality.
 
-**Hyperrealism Category Requirements**:
-- Must specify materials (liquids, metals, fabrics, etc.)
-- Must specify forces (gravity, friction, tension, etc.)
-- Photorealistic rendering quality
-- Natural lighting and accurate reflections
-- Physics must be plausible (no impossible effects)
+**Tags**: `hyperrealism` `coffee` `steam` `close-up` `macro` `kitchen` `morning` `physics` `liquid` `photorealistic`
 
-**Good Examples**:
-- Macro shots of natural phenomena (water, fire, smoke)
-- Product photography with material detail
-- Natural environments with lighting accuracy
-- Physics-based simulations (cloth, liquid, particles)
+**Camera**: 100mm macro lens | static tripod shot, locked position, no camera movement | extreme close-up, slightly elevated 15-degree angle, shallow depth of field, center composition
 
-**Avoid**:
-- Stylized or artistic interpretations
-- Impossible physics or surreal elements
-- Cartoon or animation aesthetics
-- Vague material descriptions
+**Demo**: [Watch on YouTube](https://youtube.com/watch?v=example-morning-coffee)
+
+**File**: [`morning-coffee.yaml`](morning-coffee.yaml)
+
+---
+
+
+---
+
+← [Back to Main README](../../README.md)
