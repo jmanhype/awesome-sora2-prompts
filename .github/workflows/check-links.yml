@@ -1,0 +1,93 @@
+name: Check Demo Links
+
+on:
+  # Run on pull requests that modify prompt files
+  pull_request:
+    paths:
+      - 'prompts/**/*.yaml'
+      - 'scripts/check_links.py'
+      - '.github/workflows/check-links.yml'
+
+  # Run on push to main branch
+  push:
+    branches:
+      - main
+    paths:
+      - 'prompts/**/*.yaml'
+      - 'scripts/check_links.py'
+
+  # Allow manual trigger
+  workflow_dispatch:
+
+  # Run weekly to catch links that break over time
+  schedule:
+    # Run every Monday at 9:00 AM UTC
+    - cron: '0 9 * * 1'
+
+jobs:
+  check-links:
+    name: Validate Demo Video Links
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r scripts/requirements.txt
+
+      - name: Check demo links
+        id: check-links
+        run: |
+          python scripts/check_links.py prompts/
+        continue-on-error: true
+
+      - name: Create comment on PR (if failed)
+        if: |
+          failure() &&
+          github.event_name == 'pull_request' &&
+          steps.check-links.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `## ❌ Broken Demo Links Detected
+
+            The link checker found one or more broken demo video links in this PR.
+
+            **Please verify:**
+            - All demo links are publicly accessible
+            - Videos are hosted on supported platforms (YouTube, Vimeo, etc.)
+            - Links don't require authentication to view
+            - Videos haven't been deleted or made private
+
+            **To test locally:**
+            \`\`\`bash
+            pip install -r scripts/requirements.txt
+            python scripts/check_links.py prompts/category/your-prompt.yaml
+            \`\`\`
+
+            See the workflow logs above for details on which links failed.`
+            })
+
+      - name: Fail workflow if links are broken
+        if: steps.check-links.outcome == 'failure'
+        run: |
+          echo "❌ One or more demo links are broken. See logs above for details."
+          exit 1
+
+      - name: Success message
+        if: steps.check-links.outcome == 'success'
+        run: |
+          echo "✅ All demo links are accessible!"

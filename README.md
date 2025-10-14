@@ -2,9 +2,12 @@
 
 > A curated collection of high-quality prompts for OpenAI's Sora 2, structured using the Five-Pillar Framework
 
-[![Validation](https://github.com/ai-video-factory/awesome-sora2-prompts/actions/workflows/validate.yml/badge.svg)](https://github.com/ai-video-factory/awesome-sora2-prompts/actions/workflows/validate.yml)
+[![Validation](https://github.com/jmanhype/awesome-sora2-prompts/actions/workflows/validate.yml/badge.svg)](https://github.com/jmanhype/awesome-sora2-prompts/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![GitHub stars](https://img.shields.io/github/stars/jmanhype/awesome-sora2-prompts?style=social)](https://github.com/jmanhype/awesome-sora2-prompts/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/jmanhype/awesome-sora2-prompts?style=social)](https://github.com/jmanhype/awesome-sora2-prompts/network/members)
+[![GitHub watchers](https://img.shields.io/github/watchers/jmanhype/awesome-sora2-prompts?style=social)](https://github.com/jmanhype/awesome-sora2-prompts/watchers)
 
 ## What is This?
 

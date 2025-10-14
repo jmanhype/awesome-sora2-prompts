@@ -207,12 +207,227 @@ Per Constitution principles:
 - **Respect copyright**: Don't replicate copyrighted content
 - **Credit properly**: When building on others' work
 
-## Getting Help
+## Edge Cases & Troubleshooting
+
+### Common Validation Errors
+
+**Error: "Missing required field: camera.lens"**
+- **Cause**: Camera object incomplete
+- **Fix**: Ensure camera section includes all three fields:
+```yaml
+camera:
+  lens: "35mm"
+  movement: "tracking shot"
+  framing: "medium close-up"
+```
+
+**Error: "Invalid tag format"**
+- **Cause**: Tags contain uppercase, underscores, or spaces
+- **Fix**: Use lowercase-with-hyphens only:
+  - ✅ `slow-motion`, `film-noir`, `4k`
+  - ❌ `Slow Motion`, `film_noir`, `4K Quality`
+
+**Error: "demo_link must be valid HTTPS URL"**
+- **Cause**: HTTP instead of HTTPS, or malformed URL
+- **Fix**: Use full HTTPS URL: `https://youtube.com/watch?v=...`
+
+**Error: "Expected type string, got null"**
+- **Cause**: Empty or missing value
+- **Fix**: Provide value for all required fields, use quotes if needed:
+```yaml
+summary: "Detective walks through rain-slicked noir streets"
+```
+
+### Advanced Scenarios
+
+#### Multi-Character Prompts
+
+When including multiple characters, structure your subject section clearly:
+
+```yaml
+subject_character: |
+  PRIMARY: Trench-coated detective, weathered face, fedora pulled low
+  SECONDARY: Femme fatale in red dress, standing in doorway
+  BACKGROUND: Street musicians, pedestrians with umbrellas
+```
+
+#### Complex Camera Movements
+
+For multi-phase camera work, describe sequence in action section:
+
+```yaml
+action_motion: |
+  PHASE 1 (0-3s): Slow push-in from wide establishing shot
+  PHASE 2 (3-6s): Tracking alongside moving subject
+  PHASE 3 (6-8s): Crane up revealing full environment
+```
+
+#### Physics-Heavy Simulations (Hyperrealism)
+
+Specify materials and forces explicitly:
+
+```yaml
+physics:
+  materials:
+    - "ceramic mug with matte glaze"
+    - "hot coffee with visible steam"
+    - "wooden table with natural grain"
+  forces:
+    - "gravity on liquid pour"
+    - "surface tension forming meniscus"
+    - "heat convection creating steam patterns"
+```
+
+#### Iterative Prompt Development
+
+When submitting improved versions:
+
+1. Keep original filename, update version in metadata
+2. Add iteration notes:
+```yaml
+iteration_notes: |
+  V1.0 (2025-01-15): Initial version, retention_3s: 68%
+  V1.1 (2025-01-20): Improved hook, retention_3s: 82%
+  V1.2 (2025-01-25): Refined camera movement, retention_3s: 87%
+```
+3. Update performance metrics with each iteration
+4. Document what changed and why
+
+#### Style Mixing (Experimental)
+
+For hybrid aesthetics, be explicit about style ratios:
+
+```yaml
+aesthetic_style: |
+  PRIMARY (70%): Vaporwave aesthetic - pink/cyan color grading
+  SECONDARY (30%): Glitch art - digital distortion effects
+  TECHNIQUE: Smooth blend, not jarring cuts between styles
+```
+
+### File Organization Edge Cases
+
+**Q: Can I submit multiple related prompts?**
+A: Yes! Use descriptive filenames:
+- `noir-detective-rain-v1.yaml`
+- `noir-detective-rain-v2.yaml`
+- `noir-detective-fog.yaml`
+
+**Q: What if my prompt fits multiple categories?**
+A: Choose the PRIMARY category based on dominant technique:
+- If photorealistic with slight stylization → Hyperrealism
+- If narrative-focused with stylized rendering → Cinematic
+- If pushing technical boundaries → Experimental
+
+**Q: Can I include platform-specific parameters?**
+A: Yes, in optional `notes` section:
+```yaml
+notes: |
+  Tested on Sora 2.1 with extended context window.
+  Works best with "cinematic" preset enabled.
+  Requires high-fidelity mode for material detail.
+```
+
+### Performance Tracking Edge Cases
+
+**Partial Metrics:**
+If you only have some performance data, include what you have:
+```yaml
+performance:
+  retention_3s: 85.5  # Have this
+  # retention_5s: Not tracked
+  # completion_rate: Not tracked
+```
+
+**A/B Testing:**
+When comparing hook variants, document in notes:
+```yaml
+notes: |
+  A/B Test Results:
+  - Wide shot opening: retention_3s 64%
+  - Macro detail opening: retention_3s 79% (selected)
+```
+
+### Demo Link Edge Cases
+
+**Video Not Yet Public:**
+- Mark PR as draft
+- Add demo link when ready
+- Convert to ready for review
+
+**Multiple Angles/Versions:**
+- Link to primary version in `demo_link`
+- Add alternatives in `notes`:
+```yaml
+demo_link: "https://youtube.com/watch?v=main-version"
+notes: |
+  Alternative angles:
+  - Close-up variant: https://youtube.com/watch?v=closeup
+  - Wide variant: https://youtube.com/watch?v=wide
+```
+
+**Platform Restrictions:**
+- If region-locked, note in PR description
+- Consider alternative hosting (Vimeo, direct link)
+
+### Validation Script Edge Cases
+
+**Running on Specific Files:**
+```bash
+# Validate single file
+python scripts/validate_prompts.py prompts/cinematic/prompt.yaml
+
+# Validate entire category
+python scripts/validate_prompts.py prompts/cinematic/
+
+# Validate all prompts
+python scripts/validate_prompts.py prompts/
+```
+
+**Custom Schema Testing:**
+If you're developing schema extensions, test locally:
+```bash
+# Point to custom schema
+SCHEMA_FILE=custom-schema.json python scripts/validate_prompts.py prompt.yaml
+```
+
+**Debugging Validation:**
+For detailed error output, check the script logs:
+```bash
+python scripts/validate_prompts.py prompt.yaml 2>&1 | tee validation.log
+```
+
+### Schema Extension Proposals
+
+If you want to propose new fields:
+
+1. Open GitHub Issue titled "Schema Extension: [field name]"
+2. Provide use case and examples
+3. Show how it fits Five-Pillar framework
+4. Demonstrate value with real prompts
+5. Maintainers will discuss and potentially add to schema
+
+### Contribution Quality Guidelines
+
+**Minimum Bar for Acceptance:**
+- Follows Five-Pillar framework structure
+- Passes schema validation
+- Includes working demo video
+- Properly attributed
+
+**High-Quality Contributions:**
+- Detailed camera specifications
+- Performance metrics included
+- Clear iteration notes
+- Novel techniques or patterns
+- Educational value for community
+
+### Getting Help
 
 - **Questions?** Open a [GitHub Issue](../../issues)
 - **Need examples?** Check `prompts/` directory
 - **Learn the framework**: Read [guides/five-pillars.md](guides/five-pillars.md)
 - **Technical issues**: See validation error messages for guidance
+- **Edge cases**: Re-read this section for advanced scenarios
 
 ## Recognition
 
