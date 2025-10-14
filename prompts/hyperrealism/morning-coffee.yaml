@@ -1,0 +1,75 @@
+---
+title: "Morning Coffee Pour"
+
+category: hyperrealism
+
+tags: [hyperrealism, coffee, steam, close-up, macro, kitchen, morning, physics, liquid, photorealistic]
+
+summary: >
+  Extreme close-up of dark coffee being poured into white ceramic mug, steam rising,
+  light refracting through liquid, macro lens capturing every detail in photorealistic quality.
+
+prompt: |
+  [Subject/Character - Pillar 1]
+  A stream of freshly brewed dark coffee pouring from a chrome coffee pot spout.
+  The coffee appears rich brown-black with subtle amber highlights where light passes through.
+  A white ceramic mug with smooth glazed surface sits below, empty at start.
+
+  [Action/Motion - Pillar 2]
+  Coffee pours in a steady stream from the spout into the mug. The liquid hits the bottom
+  of the mug, creating small splashes and ripples. As the mug fills, foam begins to form
+  on the surface. Steam rises in delicate wisps from the hot liquid, curling and dissipating
+  into the air. The stream remains consistent throughout, showing realistic fluid dynamics.
+
+  [Environment/Setting - Pillar 3]
+  Kitchen counter scene in soft morning light. Window light enters from the left side,
+  creating warm illumination. The counter surface is light marble with subtle veining.
+  Shallow depth of field - only the pour and mug are in sharp focus, background softly
+  blurred showing hints of kitchen items. Warm color temperature suggesting early morning.
+
+  [Cinematic Framing - Pillar 4]
+  Macro lens 100mm. Extreme close-up shot positioned at mug rim level, slightly elevated
+  angle looking down at 15 degrees. Camera is static and stable, locked on tripod.
+  Framing centers the coffee stream and mug, filling most of frame. Shallow depth of field
+  with focus on the point where coffee enters mug, chrome spout and mug rim sharp,
+  background bokeh. Fixed focal plane throughout shot.
+
+  [Aesthetic/Style - Pillar 5]
+  Photorealistic hyperrealism with emphasis on material accuracy. High dynamic range
+  capturing both dark coffee tones and bright reflections on chrome. Realistic light
+  refraction through semi-transparent coffee at edges of stream. Steam rendered with
+  volumetric accuracy, showing proper dissipation and light scattering. Surface tension
+  visible in liquid. Film-like color grading with slightly warm color temperature.
+  Professional product photography aesthetic.
+
+camera:
+  lens: "100mm macro"
+  movement: "static tripod shot, locked position, no camera movement"
+  framing: "extreme close-up, slightly elevated 15-degree angle, shallow depth of field, center composition"
+
+physics:
+  materials:
+    - liquid coffee
+    - ceramic mug
+    - chrome metal
+    - steam vapor
+    - marble counter
+  forces:
+    - gravity pulling coffee stream down
+    - liquid surface tension in mug
+    - fluid dynamics of splash and ripples
+    - steam rising from heat
+    - light refraction through semi-transparent liquid
+
+audio_notes: "Steady stream of liquid pouring into ceramic, subtle hollow echo as mug fills, very faint steam hiss, quiet morning ambience, no music."
+
+expected_duration: "6-8 seconds"
+
+author: "ai-video-factory"
+source: "original"
+created: "2025-10-14"
+sora_version: "2.0"
+
+demo_link: "https://youtube.com/watch?v=example-morning-coffee"
+
+nsfw: false

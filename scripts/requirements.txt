@@ -1,0 +1,5 @@
+# Python dependencies for Sora 2 prompt validation
+# Pin exact versions for reproducible builds per research.md R1
+
+jsonschema==4.19.2
+PyYAML==6.0.1

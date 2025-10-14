@@ -1,0 +1,208 @@
+---
+# ============================================================================
+# SORA 2 PROMPT TEMPLATE
+# ============================================================================
+# This template follows the AI Video Factory Constitution's Five-Pillar
+# Prompt Engineering framework (Principle III - NON-NEGOTIABLE).
+#
+# Before submitting, validate locally:
+#   python scripts/validate_prompts.py your-file.yaml
+#
+# See guides/five-pillars.md for detailed framework explanation.
+# See CONTRIBUTING.md for step-by-step contribution instructions.
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# REQUIRED FIELDS
+# ----------------------------------------------------------------------------
+
+title: "Your Prompt Title Here (5-100 characters)"
+# Keep it descriptive and specific. Good: "Noir Detective in Rain"
+# Bad: "Cool Video" (too vague)
+
+category: cinematic
+# REQUIRED: Choose exactly ONE category:
+#   - cinematic: Narrative-driven, story-focused prompts
+#   - hyperrealism: Photorealistic scenes, documentary style
+#   - animation: Stylized, illustrated, cartoon aesthetics
+#   - experimental: Boundary-pushing, avant-garde techniques
+
+tags: [example-tag, golden-hour, 35mm, slow-motion]
+# REQUIRED: 1-12 unique tags in lowercase-with-hyphens format
+# Use for discoverability via GitHub search
+# Examples: noir, rain, night, detective, wide-angle, watercolor
+
+summary: >
+  Brief description of the visual outcome in 20-280 characters.
+  Use folded block (>) for continuous paragraph. Think Twitter-length.
+  Focus on what the viewer will see, not technical details.
+# Good: "Trench-coated detective walks through rain-slicked streets, neon reflections, 35mm film grain"
+# Bad: "A video about a detective" (too vague, fails Quality Gate per Principle V)
+
+# ----------------------------------------------------------------------------
+# FIVE-PILLAR PROMPT STRUCTURE (Principle III - NON-NEGOTIABLE)
+# ----------------------------------------------------------------------------
+# Use literal block (|) to preserve line structure.
+# Address ALL five pillars explicitly in your prompt:
+#
+# Pillar 1: Subject & Character - Who/what is the focus?
+# Pillar 2: Action & Motion - What happens? Camera and subject movement
+# Pillar 3: Environment & Setting - Where? Time, weather, spatial depth
+# Pillar 4: Cinematic Framing - How is it shot? Lens, angle, composition
+# Pillar 5: Aesthetic & Style - Visual treatment? Lighting, color, film stock
+
+prompt: |
+  [Subject/Character - Pillar 1]
+  A trench-coated detective in a fedora, face half-lit by neon signs.
+  Weathered features, stubble, tired eyes scanning the street.
+
+  [Action/Motion - Pillar 2]
+  The detective walks slowly through rain-slicked streets at night.
+  Camera follows from behind with a smooth tracking shot.
+  Puddles ripple as footsteps disturb the water.
+
+  [Environment/Setting - Pillar 3]
+  City street at midnight. Heavy rain. Neon signs reflect in wet pavement.
+  Distant streetlights create pools of amber light. Empty sidewalk.
+  Mist rises from steam vents. Depth: Detective in foreground, blurred city lights in background.
+
+  [Cinematic Framing - Pillar 4]
+  35mm lens. Medium shot from behind, third-person perspective.
+  Slow tracking movement follows detective at walking pace.
+  Shallow depth of field keeps focus on detective, background softly blurred.
+
+  [Aesthetic/Style - Pillar 5]
+  High contrast noir lighting. Film grain texture.
+  Color palette: deep blues, amber streetlights, neon reds and greens.
+  Cinematic film stock aesthetic, reminiscent of 1940s detective films.
+
+# ----------------------------------------------------------------------------
+# CAMERA SPECIFICATIONS (Required - Pillar 4)
+# ----------------------------------------------------------------------------
+
+camera:
+  lens: "35mm"
+  # Examples: "24mm wide-angle", "50mm", "85mm", "telephoto", "fisheye"
+  # Specific focal lengths preferred over generic terms
+
+  movement: "slow tracking shot, follows from behind at walking pace"
+  # Examples: "handheld shake", "smooth dolly", "static wide shot", "crane up"
+  # Describe both camera movement and any subject movement
+
+  framing: "medium shot, third-person perspective, shallow depth of field"
+  # Examples: "close-up on face", "wide establishing shot", "over-the-shoulder",
+  # "bird's eye view", "low angle looking up"
+
+# ----------------------------------------------------------------------------
+# OPTIONAL FIELDS (Recommended for Enhanced Quality)
+# ----------------------------------------------------------------------------
+
+# Physics hints - STRONGLY RECOMMENDED for hyperrealism category
+# Helps Sora 2 simulate realistic material interactions
+physics:
+  materials:
+    - wet pavement
+    - fabric coat
+    - falling rain
+    - glass windows
+  # List materials present in scene. Examples: water, sand, fabric, glass, smoke, metal
+
+  forces:
+    - gravity on raindrops
+    - coat fabric flow as detective walks
+    - water ripples from footsteps
+  # List forces affecting objects. Examples: wind, gravity, water flow, inertia
+
+# Audio cues for Sora 2's synchronized audio generation
+audio_notes: "Steady rain pattering on pavement. Distant jazz music from nearby club. Muffled footsteps on wet concrete. Occasional car passing in distance."
+# Keep to 10-500 characters. Be specific but concise.
+# Examples: "Ocean waves crashing, seagulls crying", "Crackling campfire, wind in trees"
+
+# Expected video length
+expected_duration: "6-8 seconds"
+# Format: "X-Y seconds" (typical Sora 2 range is 3-20 seconds)
+
+# ----------------------------------------------------------------------------
+# CONTRIBUTOR INFORMATION (Required)
+# ----------------------------------------------------------------------------
+
+author: "your-github-username"
+# Your GitHub username for attribution
+
+source: "original"
+# If this prompt is original, use "original"
+# If derived/inspired by existing work, provide URL to attributed source
+# Examples: "original", "https://example.com/original-prompt"
+# Required per ethics standards (see constitution)
+
+created: "2025-10-14"
+# Date in YYYY-MM-DD format
+
+sora_version: "2.0"
+# Sora version compatibility (e.g., "2.0", "2.1")
+# This repository is Sora 2 only per constitution scope
+
+# ----------------------------------------------------------------------------
+# DEMO LINK (REQUIRED for PR merge - Principle VI NON-NEGOTIABLE)
+# ----------------------------------------------------------------------------
+
+demo_link: "https://youtube.com/watch?v=your-demo-link"
+# REQUIRED: Working link to Sora 2 output demonstrating this prompt
+# Recommended: YouTube Unlisted (free, unlimited, stable)
+# Alternative: Vimeo Unlisted (ad-free, professional)
+# See research.md R4 for hosting platform comparison
+#
+# Test-First Contribution per Principle VI - demo link is NON-NEGOTIABLE
+# PRs without demo links will be rejected
+
+# ----------------------------------------------------------------------------
+# CONTENT FLAGS (Required - defaults to false if omitted)
+# ----------------------------------------------------------------------------
+
+nsfw: false
+# Defaults to false. Setting to true requires maintainer pre-approval.
+# All prompts must comply with OpenAI usage policies and ethics standards.
+
+# ----------------------------------------------------------------------------
+# PERFORMANCE METRICS (Optional - User Story 4/P4)
+# ----------------------------------------------------------------------------
+# Add performance data if you've tested this prompt with real audiences.
+# Enables data-driven iteration per Principle VII.
+
+# performance:
+#   retention_3s: 85.5
+#   # 3-second retention rate (percentage, 0-100)
+#   # Critical metric per Principle I (Hook-First Storytelling)
+#
+#   retention_5s: 72.3
+#   # 5-second retention rate (percentage, 0-100)
+#
+#   completion_rate: 58.2
+#   # Watch-through completion rate (percentage, 0-100)
+#
+#   replays: 156
+#   # Number of times viewers replayed the video (integer)
+
+# ============================================================================
+# VALIDATION CHECKLIST (Before submitting PR)
+# ============================================================================
+# [ ] Title is 5-100 characters, specific and descriptive
+# [ ] Category selected (cinematic/hyperrealism/animation/experimental)
+# [ ] 1-12 tags in lowercase-with-hyphens format
+# [ ] Summary is 20-280 characters
+# [ ] Prompt addresses all five pillars explicitly
+# [ ] Camera specs filled: lens, movement, framing
+# [ ] Author is your GitHub username
+# [ ] Source is "original" or URL to attributed work
+# [ ] Created date in YYYY-MM-DD format
+# [ ] Sora version starts with "2."
+# [ ] Demo link is valid HTTPS URL (YouTube Unlisted recommended)
+# [ ] NSFW flag set correctly (defaults to false)
+# [ ] Ran local validation: python scripts/validate_prompts.py your-file.yaml
+# [ ] No vague language - specific details throughout
+# [ ] Physics hints included if hyperrealism category
+#
+# See CONTRIBUTING.md for full submission guidelines
+# See guides/five-pillars.md for prompt engineering best practices
+# ============================================================================
+---

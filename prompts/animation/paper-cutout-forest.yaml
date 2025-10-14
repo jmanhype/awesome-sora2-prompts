@@ -1,0 +1,65 @@
+---
+title: "Paper Cutout Forest Journey"
+
+category: animation
+
+tags: [animation, paper-cutout, forest, stylized, stop-motion, whimsical, layered, craft, handmade, colorful]
+
+summary: >
+  Stylized paper cutout character walks through layered paper forest scene, flat 2D aesthetic
+  with depth through parallax, vibrant colors, handcrafted stop-motion animation style.
+
+prompt: |
+  [Subject/Character - Pillar 1]
+  A simple paper cutout character - small humanoid figure with rounded features,
+  cut from bright orange construction paper. The character has visible paper texture,
+  clean cut edges, and flat 2D form with no shading, just solid color. Simple dot eyes
+  and curved smile give friendly expression. Character stands about 2 inches tall in scale.
+
+  [Action/Motion - Pillar 2]
+  The paper character walks from left to right across the scene with simple, rhythmic
+  step animation. Each step has slight vertical bounce, evoking classic walk cycle.
+  Character moves at steady, cheerful pace. Arms swing slightly with each step.
+  The walk has stop-motion quality with subtle frame-by-frame imperfections that add charm.
+  Multiple forest layers move at different speeds behind character, creating parallax effect.
+
+  [Environment/Setting - Pillar 3]
+  Multi-layered paper forest scene with distinct depth planes. Foreground: dark green
+  paper grass with hand-cut irregular edges. Middle ground: tree trunks in brown and
+  tan, simple cylindrical shapes. Background: lighter green paper trees and bushes,
+  progressively lighter colors for distance. Sky is pale blue paper. Each layer is
+  clearly separate, creating forced perspective through color and scale. Visible paper
+  texture throughout. White background shows between layers.
+
+  [Cinematic Framing - Pillar 4]
+  50mm lens equivalent for animation camera. Side-view profile shot, camera tracking
+  horizontally following character's movement at constant speed. Character stays center
+  frame while background layers move at different rates (parallax scrolling). Medium shot
+  showing character full body with surrounding environment. Static vertical positioning,
+  only horizontal camera tracking. Flat, even lighting with no dramatic shadows.
+
+  [Aesthetic/Style - Pillar 5]
+  Handcrafted paper cutout animation aesthetic inspired by stop-motion and children's
+  book illustrations. Bright, saturated colors with visible paper texture and grain.
+  Clean cut edges with slight imperfections. Flat lighting to emphasize 2D nature.
+  No gradient shading - only solid colors. Slight frame-by-frame variation creates
+  charming handmade quality. Whimsical and cheerful tone. Color palette: orange character,
+  green forest tones, blue sky, brown/tan wood. Matte finish on all paper elements.
+
+camera:
+  lens: "50mm animation camera"
+  movement: "smooth horizontal tracking, follows character at constant speed, parallax layers moving at different rates"
+  framing: "side-view profile, medium shot showing full character, center composition with environment layers"
+
+audio_notes: "Light, playful music with xylophone or music box quality. Soft footstep sounds with paper rustle. Gentle wind ambience. No dialogue. Whimsical forest atmosphere."
+
+expected_duration: "8-10 seconds"
+
+author: "ai-video-factory"
+source: "original"
+created: "2025-10-14"
+sora_version: "2.0"
+
+demo_link: "https://youtube.com/watch?v=example-paper-forest"
+
+nsfw: false

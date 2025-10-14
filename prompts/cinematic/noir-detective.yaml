@@ -1,0 +1,74 @@
+---
+title: "Noir Detective in Rain"
+
+category: cinematic
+
+tags: [noir, rain, night, detective, 35mm, tracking-shot, neon, urban, mystery, film-noir]
+
+summary: >
+  Trench-coated detective walks through rain-slicked streets at midnight,
+  neon reflections on wet pavement, 35mm film grain, high contrast noir lighting.
+
+prompt: |
+  [Subject/Character - Pillar 1]
+  A trench-coated detective in a fedora, face half-lit by neon signs.
+  Weathered features, stubble, tired eyes scanning the street with world-weary vigilance.
+  Navy trench coat collar turned up against the rain.
+
+  [Action/Motion - Pillar 2]
+  The detective walks slowly through rain-slicked streets at night, each footstep
+  deliberate and measured. Camera follows from behind with a smooth tracking shot
+  at walking pace. Puddles ripple as footsteps disturb the water. Occasional head turn
+  to check side alleys.
+
+  [Environment/Setting - Pillar 3]
+  City street at midnight. Heavy rain creating sheets of water. Neon signs
+  reflect in wet pavement - red, green, amber lights creating streaks of color.
+  Distant streetlights create pools of amber light. Empty sidewalk. Steam rises
+  from subway grates. Mist hangs in the air. Depth: Detective in foreground,
+  blurred city lights in background fading into misty darkness.
+
+  [Cinematic Framing - Pillar 4]
+  35mm lens. Medium shot from behind, third-person perspective, camera positioned
+  at shoulder height. Slow tracking movement follows detective at consistent
+  walking pace, maintaining 8-10 feet distance. Shallow depth of field keeps
+  focus on detective's silhouette, background softly blurred with bokeh effect
+  from neon lights.
+
+  [Aesthetic/Style - Pillar 5]
+  High contrast noir lighting with deep blacks and bright highlights.
+  Film grain texture reminiscent of 1940s detective films. Color palette:
+  deep blues dominate shadows, amber streetlights, neon reds and greens
+  punctuate the darkness. Cinematic film stock aesthetic with slight vignette.
+  Moody, atmospheric, emphasizing isolation and mystery.
+
+camera:
+  lens: "35mm"
+  movement: "slow tracking shot, follows from behind at walking pace, camera height at shoulder level"
+  framing: "medium shot, third-person perspective, shallow depth of field with background bokeh"
+
+physics:
+  materials:
+    - wet pavement
+    - fabric trench coat
+    - falling rain
+    - puddles
+    - steam vapor
+  forces:
+    - gravity on raindrops
+    - coat fabric flow as detective walks
+    - water ripples from footsteps
+    - mist diffusion in air
+
+audio_notes: "Steady rain pattering on pavement and coat. Muffled footsteps splashing through puddles. Distant jazz music from nearby club, barely audible. Occasional car passing in distance. Steam hissing from subway grate."
+
+expected_duration: "6-8 seconds"
+
+author: "ai-video-factory"
+source: "original"
+created: "2025-10-14"
+sora_version: "2.0"
+
+demo_link: "https://youtube.com/watch?v=example-noir-detective"
+
+nsfw: false

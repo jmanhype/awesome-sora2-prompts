@@ -1,0 +1,220 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/ai-video-factory/awesome-sora2-prompts/prompt.schema.json",
+  "title": "Sora 2 Prompt Schema",
+  "description": "Validation schema for Sora 2 prompts following the Five-Pillar Framework (AI Video Factory Constitution Principle III)",
+  "type": "object",
+  "required": [
+    "title",
+    "category",
+    "tags",
+    "summary",
+    "prompt",
+    "camera",
+    "author",
+    "created",
+    "sora_version"
+  ],
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 100,
+      "description": "Descriptive title for the prompt",
+      "error_msg": "Title must be between 5-100 characters. Be specific and descriptive."
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "cinematic",
+        "hyperrealism",
+        "animation",
+        "experimental"
+      ],
+      "description": "Primary category: cinematic (narrative), hyperrealism (photorealistic), animation (stylized), experimental (avant-garde)",
+      "error_msg": "Category must be one of: cinematic, hyperrealism, animation, experimental. See constitution for definitions."
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9-]+$",
+        "minLength": 2,
+        "maxLength": 30
+      },
+      "minItems": 1,
+      "maxItems": 12,
+      "uniqueItems": true,
+      "description": "Searchable tags for discovery (lowercase-with-hyphens format)",
+      "error_msg": "Provide 1-12 unique tags in lowercase-with-hyphens format (e.g., 'golden-hour', 'noir', '35mm')"
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 280,
+      "description": "Brief description of visual outcome (≤280 chars, Twitter-length)",
+      "error_msg": "Summary must be 20-280 characters. Describe the visual outcome concisely."
+    },
+    "prompt": {
+      "type": "string",
+      "minLength": 50,
+      "description": "Full Sora 2 prompt text following Five-Pillar framework (subject, action, environment, framing, style)",
+      "error_msg": "Prompt must be at least 50 characters and follow Five-Pillar framework. See guides/five-pillars.md for structure."
+    },
+    "camera": {
+      "type": "object",
+      "required": [
+        "lens",
+        "movement",
+        "framing"
+      ],
+      "properties": {
+        "lens": {
+          "type": "string",
+          "minLength": 2,
+          "description": "Lens specification (e.g., '35mm', '85mm', 'wide-angle', 'telephoto')",
+          "error_msg": "Specify lens type. Examples: '35mm', '50mm', '85mm', 'wide-angle', 'fisheye'. Required per Principle III."
+        },
+        "movement": {
+          "type": "string",
+          "minLength": 5,
+          "description": "Camera movement description (e.g., 'slow tracking shot', 'handheld', 'static')",
+          "error_msg": "Describe camera movement. Examples: 'slow tracking shot', 'handheld shake', 'smooth dolly', 'static wide shot'."
+        },
+        "framing": {
+          "type": "string",
+          "minLength": 5,
+          "description": "Shot framing and composition (e.g., 'medium shot', 'close-up', 'bird's eye view')",
+          "error_msg": "Specify framing. Examples: 'close-up', 'medium shot', 'wide shot', 'over-the-shoulder', 'bird's eye view'."
+        }
+      },
+      "description": "Camera specifications (Pillar 4: Cinematic Framing)",
+      "error_msg": "Camera specifications required per Five-Pillar framework (Principle III). Must include lens, movement, and framing."
+    },
+    "physics": {
+      "type": "object",
+      "properties": {
+        "materials": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 2
+          },
+          "minItems": 1,
+          "description": "Materials present in scene (e.g., 'water', 'glass', 'fabric', 'metal')",
+          "error_msg": "List materials for physics realism. Examples: 'water', 'sand', 'fabric', 'glass', 'smoke'."
+        },
+        "forces": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 2
+          },
+          "minItems": 1,
+          "description": "Physical forces at play (e.g., 'gravity', 'wind', 'water flow')",
+          "error_msg": "List forces affecting objects. Examples: 'gravity on raindrops', 'wind on leaves', 'water flow'."
+        }
+      },
+      "description": "Physics hints for realistic simulation (optional but recommended for hyperrealism category)"
+    },
+    "audio_notes": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 500,
+      "description": "Audio cues for Sora 2 synchronized audio generation (optional)",
+      "error_msg": "Audio notes should be 10-500 characters. Examples: 'Steady rain, distant jazz, muffled footsteps'."
+    },
+    "expected_duration": {
+      "type": "string",
+      "pattern": "^[0-9]+-[0-9]+ seconds?$",
+      "description": "Typical Sora 2 output length (e.g., '6-8 seconds')",
+      "error_msg": "Format as 'X-Y seconds' (e.g., '6-8 seconds', '10-15 seconds')."
+    },
+    "demo_link": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://",
+      "description": "URL to Sora 2 output demo (YouTube, Vimeo, or direct file link). REQUIRED for PR merge per Principle VI.",
+      "error_msg": "Demo link must be a valid HTTPS URL. Use YouTube Unlisted or Vimeo for hosting. Required per Principle VI (Test-First Contribution)."
+    },
+    "nsfw": {
+      "type": "boolean",
+      "default": false,
+      "description": "NSFW content flag (defaults to false, requires explicit true + maintainer approval)",
+      "error_msg": "NSFW flag must be boolean. Defaults to false. Setting to true requires maintainer pre-approval."
+    },
+    "author": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100,
+      "description": "GitHub username or contributor name",
+      "error_msg": "Author field required. Use your GitHub username."
+    },
+    "source": {
+      "type": "string",
+      "minLength": 3,
+      "description": "Attribution source: 'original' or URL if derived/inspired by existing work",
+      "error_msg": "Source must be 'original' or a URL to attributed source. Required per ethics standards."
+    },
+    "created": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "description": "Creation date in YYYY-MM-DD format",
+      "error_msg": "Created date must be in YYYY-MM-DD format (e.g., '2025-10-14')."
+    },
+    "sora_version": {
+      "type": "string",
+      "pattern": "^2\\.[0-9]+(\\.[0-9]+)?$",
+      "description": "Sora version compatibility (e.g., '2.0', '2.1')",
+      "error_msg": "Sora version must start with '2.' (e.g., '2.0', '2.1'). This repository is Sora 2 only."
+    },
+    "performance": {
+      "type": "object",
+      "properties": {
+        "retention_3s": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "3-second retention rate (percentage, 0-100)",
+          "error_msg": "3-second retention must be a percentage between 0-100."
+        },
+        "retention_5s": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "5-second retention rate (percentage, 0-100)",
+          "error_msg": "5-second retention must be a percentage between 0-100."
+        },
+        "completion_rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Watch-through completion rate (percentage, 0-100)",
+          "error_msg": "Completion rate must be a percentage between 0-100."
+        },
+        "replays": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of times viewers replayed the video",
+          "error_msg": "Replays must be a non-negative integer."
+        }
+      },
+      "description": "Optional performance metrics for data-driven iteration (User Story 4/P4)"
+    }
+  },
+  "additionalProperties": false,
+  "if": {
+    "properties": {
+      "category": {
+        "const": "hyperrealism"
+      }
+    }
+  },
+  "then": {
+    "required": [
+      "physics"
+    ],
+    "error_msg": "Hyperrealism category requires 'physics' field with materials and forces for realistic simulation."
+  }
+}

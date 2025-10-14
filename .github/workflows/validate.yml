@@ -1,0 +1,54 @@
+name: Validate Prompts
+
+on:
+  pull_request:
+    branches:
+      - '**'
+    paths:
+      - 'prompts/**/*.yaml'
+      - 'prompts/**/*.yml'
+      - 'prompt.schema.json'
+      - 'scripts/validate_prompts.py'
+      - 'scripts/requirements.txt'
+      - '.github/workflows/validate.yml'
+
+  push:
+    branches:
+      - main
+    paths:
+      - 'prompts/**/*.yaml'
+      - 'prompts/**/*.yml'
+      - 'prompt.schema.json'
+      - 'scripts/validate_prompts.py'
+      - 'scripts/requirements.txt'
+      - '.github/workflows/validate.yml'
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  validate:
+    name: Validate Sora 2 Prompts
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: 'scripts/requirements.txt'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r scripts/requirements.txt
+
+      - name: Validate prompts
+        run: |
+          python scripts/validate_prompts.py prompts/

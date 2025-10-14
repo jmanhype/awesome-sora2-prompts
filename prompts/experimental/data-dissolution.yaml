@@ -1,0 +1,71 @@
+---
+title: "Digital Data Dissolution"
+
+category: experimental
+
+tags: [experimental, abstract, glitch, digital, data, vaporwave, cyberpunk, particle, transformation, surreal]
+
+summary: >
+  Abstract visualization of 3D wireframe cityscape dissolving into cascading data particles,
+  glitch effects, vaporwave aesthetic, experimental digital art style with impossible physics.
+
+prompt: |
+  [Subject/Character - Pillar 1]
+  A geometric 3D wireframe cityscape rendered in bright cyan and magenta lines.
+  The city consists of cubic buildings with visible edge lines, no solid surfaces,
+  only glowing wireframe outlines. Grid-like structure with digital precision.
+  Buildings range from small to skyscraper height, creating dense urban silhouette.
+  All lines pulse with digital energy.
+
+  [Action/Motion - Pillar 2]
+  The wireframe cityscape begins stable, then progressively dissolves from top to bottom.
+  Building edges break apart into individual data particles - small glowing cubes and
+  points that cascade downward like digital rain. Particles fall in streams, some
+  defying gravity by floating or moving laterally. Glitch effects appear intermittently:
+  horizontal scan lines, RGB color separation, pixelated distortion. The dissolution
+  accelerates, creating waterfall effect of data. Some particles coalesce into abstract
+  forms before dispersing again.
+
+  [Environment/Setting - Pillar 3]
+  Abstract digital void space with deep purple gradient background transitioning to
+  black at edges. Grid floor extends to infinity rendered in faint cyan lines.
+  No physical light sources - everything is self-illuminated with neon glow.
+  Depth created through particle density and atmospheric perspective. Occasional
+  digital artifacts float in background: floating text fragments, error messages,
+  geometric shapes. Surreal space without physical rules.
+
+  [Cinematic Framing - Pillar 4]
+  Wide angle lens 24mm. Low angle shot looking up at cityscape, camera positioned
+  below grid floor level. Slow upward crane movement as dissolution occurs, creating
+  sense of being engulfed by falling data. Wide framing shows multiple buildings and
+  particle streams. Deep depth of field keeps everything in relative focus.
+  Slight handheld-like digital jitter adds to glitch aesthetic. Camera movement
+  occasionally stutters or jumps frames intentionally.
+
+  [Aesthetic/Style - Pillar 5]
+  Experimental vaporwave-meets-cyberpunk aesthetic with heavy emphasis on synthetic
+  digital appearance. Color palette: cyan, magenta, purple, black with occasional
+  yellow accents. High contrast, oversaturated colors. Bloom and glow effects on
+  all bright elements. Intentional glitch artifacts: scan lines, chromatic aberration,
+  pixel sorting, data moshing. VHS tracking errors and digital compression artifacts
+  appear periodically. Impossible physics - particles behave in anti-gravity ways.
+  Surreal, dreamlike quality. Nostalgic 80s/90s computer graphics aesthetic filtered
+  through modern rendering.
+
+camera:
+  lens: "24mm wide angle"
+  movement: "slow upward crane movement with intentional digital jitter and frame stuttering"
+  framing: "low angle looking up, wide shot showing cityscape and particle streams, deep depth of field"
+
+audio_notes: "Synthesizer drones with deep bass. Digital glitch sounds, data stream effects, high-pitched sine waves. Rhythmic electronic beat in background. Occasional pitched-down vocal samples. Vaporwave style ambient electronic music. No dialogue."
+
+expected_duration: "10-12 seconds"
+
+author: "ai-video-factory"
+source: "original"
+created: "2025-10-14"
+sora_version: "2.0"
+
+demo_link: "https://youtube.com/watch?v=example-data-dissolution"
+
+nsfw: false
