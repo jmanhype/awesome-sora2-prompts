@@ -1,0 +1,54 @@
+title: "Reality Glitch Aesthetic"
+category: experimental
+tags: [experimental, glitch, digital, corruption, abstract, datamosh, rgb-shift, distortion, avant-garde, digital-art]
+summary: >
+  Normal urban scene progressively corrupted by digital glitch effects,
+  RGB color channel separation, datamoshing, pixel sorting, reality fragmenting
+  into digital artifacts, experimental video art aesthetic.
+
+prompt: |
+  Subject/Character:
+  Person walking down normal city street, appearance gradually corrupted
+  by glitch effects, figure fragmenting into RGB channels that separate and drift,
+  pixel-sorted streaks replacing body parts, form dissolving into data.
+
+  Action/Motion:
+  Normal walking motion increasingly disrupted by time glitches and frame skips,
+  movements stuttering and repeating, body parts lagging behind in different
+  color channels, smooth motion transitioning to fragmented digital artifacts,
+  reality breaking down into component data streams.
+
+  Environment/Setting:
+  Contemporary urban street starting normal then progressively corrupted,
+  buildings experiencing RGB channel separation and drift apart, datamosh compression
+  artifacts spreading across scene, pixel sorting creating vertical streaks,
+  environment fragmenting into abstract digital patterns.
+
+  Cinematic Framing:
+  Starts as stable locked camera position, progressively corrupted by
+  screen tearing and position glitches, frame jumps and stutters,
+  multiple overlapping frames creating temporal displacement, camera itself
+  becoming part of the glitch aesthetic.
+
+  Aesthetic/Style:
+  Digital glitch art aesthetic, intentional video compression artifacts,
+  RGB color channel separation and offset, datamoshing techniques, pixel sorting
+  creating vertical streaks, temporal displacement effects, scan line distortion,
+  digital noise and corruption, abstract digital expressionism, vaporwave influence,
+  beauty in digital degradation.
+
+camera:
+  lens: "50mm"
+  movement: "locked position degrading into glitchy unstable tracking"
+  framing: "medium shot corrupting into abstract framing"
+
+expected_duration: "8-12 seconds"
+
+author: "ai-video-factory"
+source: "original"
+created: "2025-10-14"
+sora_version: "2.0"
+
+demo_link: "https://youtube.com/watch?v=example-glitch-aesthetic"
+
+nsfw: false

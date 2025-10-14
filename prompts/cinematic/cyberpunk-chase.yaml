@@ -1,0 +1,48 @@
+title: "Cyberpunk Motorcycle Chase"
+category: cinematic
+tags: [cyberpunk, action, chase, neon, night, motorcycle, tracking-shot, urban, futuristic, high-speed]
+summary: >
+  High-speed motorcycle chase through neon-lit cyberpunk streets at night,
+  rider weaving between hovercars, holographic advertisements flickering,
+  rain-slicked roads reflecting vibrant colors, handheld camera following action.
+
+prompt: |
+  Subject/Character:
+  Black-clad motorcycle rider on sleek red sport bike, visor reflecting neon signs,
+  chrome details catching colored light, futuristic helmet design.
+
+  Action/Motion:
+  High-speed chase through crowded cyberpunk streets, sharp turns around corners,
+  bike leaning into curves, sparks flying from occasional contact, weaving between traffic,
+  narrowly avoiding obstacles.
+
+  Environment/Setting:
+  Dystopian megacity at night, towering skyscrapers with holographic ads,
+  neon signs in Japanese and English, steam rising from vents, rain-slicked streets,
+  hovercars floating overhead, crowds of pedestrians with umbrellas.
+
+  Cinematic Framing:
+  Handheld camera mounted on following vehicle, dynamic tracking shot keeping rider
+  center-frame, medium shot with shallow depth of field, occasional POV inserts,
+  motion blur on background, sharp focus on rider.
+
+  Aesthetic/Style:
+  Blade Runner-inspired cyberpunk aesthetic, vibrant neon colors (pink, cyan, purple),
+  high contrast lighting, lens flares from neon signs, cinematic color grading,
+  gritty urban atmosphere, film grain texture.
+
+camera:
+  lens: "24mm"
+  movement: "dynamic handheld tracking, following from vehicle at high speed"
+  framing: "medium shot, center-frame rider with motion blur background"
+
+expected_duration: "8-12 seconds"
+
+author: "ai-video-factory"
+source: "original"
+created: "2025-10-14"
+sora_version: "2.0"
+
+demo_link: "https://youtube.com/watch?v=example-cyberpunk-chase"
+
+nsfw: false

@@ -1,0 +1,51 @@
+title: "Watercolor Dreamscape Journey"
+category: animation
+tags: [animation, watercolor, dreamscape, painted, soft, atmospheric, surreal, handpainted, flowing, artistic]
+summary: >
+  Flowing watercolor animation of figure walking through painted dreamscape,
+  colors bleeding and blending naturally, soft edges, paper texture visible,
+  ethereal atmosphere with layered transparency effects.
+
+prompt: |
+  Subject/Character:
+  Simplified silhouette figure rendered in dark watercolor, loose brushstroke edges,
+  flowing dress or coat painted with transparent washes, minimal facial detail,
+  dreamlike and abstract representation rather than realistic depiction.
+
+  Action/Motion:
+  Slow graceful walk through transforming landscape, figure fading in and out
+  of opacity, colors bleeding from figure into environment, smooth flowing motion
+  like ink spreading on wet paper, elements dissolving and reforming.
+
+  Environment/Setting:
+  Abstract watercolor landscape constantly morphing, suggested trees and hills
+  made from loose brushstrokes, sky bleeding into ground with gradient washes,
+  floating color clouds, visible paper texture throughout, no hard edges anywhere,
+  palette of blues, purples, soft pinks, and muted greens.
+
+  Cinematic Framing:
+  Slow horizontal tracking at walking pace, camera movement feeling organic
+  and hand-painted, soft focus aesthetic, dreamy depth of field effect,
+  figure centered with environment flowing around them.
+
+  Aesthetic/Style:
+  Traditional watercolor animation technique, visible brush textures and paper grain,
+  transparent color overlays creating depth, wet-on-wet blending effects,
+  color bleeds at edges, no outlines or hard shapes, soft atmospheric lighting,
+  impressionistic rather than detailed, emphasis on mood and color harmony.
+
+camera:
+  lens: "50mm animation camera"
+  movement: "slow smooth horizontal tracking, organic handheld feel"
+  framing: "medium shot, centered figure, soft focus dreamlike"
+
+expected_duration: "8-12 seconds"
+
+author: "ai-video-factory"
+source: "original"
+created: "2025-10-14"
+sora_version: "2.0"
+
+demo_link: "https://youtube.com/watch?v=example-watercolor-dreamscape"
+
+nsfw: false

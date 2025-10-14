@@ -42,6 +42,19 @@ Every prompt includes:
 3. Practice with the framework structure
 4. Generate your own videos
 
+### 🔍 Search by Tags
+
+Find prompts by searching tags in the repository:
+
+```
+tag:noir tag:rain          # Multiple tags
+tag:hyperrealism tag:macro # Category + style
+tag:stop-motion            # Animation technique
+tag:glitch tag:experimental # Experimental effects
+```
+
+Or browse prompts directly in each category directory.
+
 ### 🤝 Contributing
 
 We welcome high-quality prompts that advance the community's understanding!
@@ -82,35 +95,45 @@ Every prompt in this repository follows this structure:
 
 Learn more: [Five-Pillar Framework Guide](guides/five-pillars.md)
 
-## Featured Prompts
+## Browse by Category
 
-### Cinematic
-**[Noir Detective in Rain](prompts/cinematic/noir-detective.yaml)**
-- Trench-coated detective walking through rain-slicked streets
-- 35mm tracking shot, high-contrast noir lighting
-- Neon reflections, film grain aesthetic
-- [Demo video →](https://youtube.com/watch?v=example-noir-detective)
+### 🎬 [Cinematic Prompts](prompts/cinematic/)
+Story-driven videos with traditional filmmaking techniques. Character-focused scenes with narrative elements and dramatic lighting.
 
-### Hyperrealism
-**[Morning Coffee Pour](prompts/hyperrealism/morning-coffee.yaml)**
-- Extreme close-up of coffee pouring into ceramic mug
-- 100mm macro lens, static shot
-- Physics-accurate liquid dynamics, steam, light refraction
-- [Demo video →](https://youtube.com/watch?v=example-morning-coffee)
+**Featured Prompts**:
+- **[Noir Detective in Rain](prompts/cinematic/noir-detective.yaml)** - Trench-coated detective walking through rain-slicked streets, 35mm tracking shot, high-contrast noir lighting | [Demo →](https://youtube.com/watch?v=example-noir-detective)
 
-### Animation
-**[Paper Cutout Forest Journey](prompts/animation/paper-cutout-forest.yaml)**
-- Stylized paper cutout character walking through layered forest
-- Stop-motion aesthetic, parallax scrolling
-- Handcrafted texture, vibrant colors
-- [Demo video →](https://youtube.com/watch?v=example-paper-forest)
+[→ View all cinematic prompts](prompts/cinematic/)
 
-### Experimental
-**[Digital Data Dissolution](prompts/experimental/data-dissolution.yaml)**
-- 3D wireframe cityscape dissolving into data particles
-- Glitch effects, vaporwave aesthetic
-- Impossible physics, abstract visualization
-- [Demo video →](https://youtube.com/watch?v=example-data-dissolution)
+---
+
+### 📸 [Hyperrealism Prompts](prompts/hyperrealism/)
+Photorealistic simulations with material accuracy and physics. Natural lighting, real-world plausibility, physics-based rendering.
+
+**Featured Prompts**:
+- **[Morning Coffee Pour](prompts/hyperrealism/morning-coffee.yaml)** - Extreme close-up of coffee pouring into ceramic mug, 100mm macro lens, physics-accurate liquid dynamics | [Demo →](https://youtube.com/watch?v=example-morning-coffee)
+
+[→ View all hyperrealism prompts](prompts/hyperrealism/)
+
+---
+
+### 🎨 [Animation Prompts](prompts/animation/)
+Stylized, non-realistic aesthetics using creative animation techniques. Artistic stylization, handcrafted quality, emphasis on design.
+
+**Featured Prompts**:
+- **[Paper Cutout Forest Journey](prompts/animation/paper-cutout-forest.yaml)** - Stylized paper cutout character walking through layered forest, stop-motion aesthetic, parallax scrolling | [Demo →](https://youtube.com/watch?v=example-paper-forest)
+
+[→ View all animation prompts](prompts/animation/)
+
+---
+
+### 🔬 [Experimental Prompts](prompts/experimental/)
+Boundary-pushing, avant-garde work exploring Sora 2's capabilities. Innovative concepts, surreal visuals, unconventional approaches.
+
+**Featured Prompts**:
+- **[Digital Data Dissolution](prompts/experimental/data-dissolution.yaml)** - 3D wireframe cityscape dissolving into data particles, glitch effects, vaporwave aesthetic | [Demo →](https://youtube.com/watch?v=example-data-dissolution)
+
+[→ View all experimental prompts](prompts/experimental/)
 
 ## Repository Structure
 
@@ -162,45 +185,18 @@ python scripts/validate_prompts.py prompts/
 
 All pull requests automatically run validation via GitHub Actions. PRs with validation failures cannot be merged.
 
-## Categories
+## Search by Tags
 
-### 🎬 Cinematic
-Story-driven videos with traditional filmmaking techniques. Focus on character, narrative, and emotional impact.
+Find prompts by combining tags:
 
-**Characteristics**:
-- Character-focused scenes
-- Narrative elements
-- Traditional cinematography
-- Dramatic lighting and composition
+| Search | Results |
+|--------|---------|
+| `tag:noir tag:rain` | Film noir in rainy scenes |
+| `tag:hyperrealism tag:macro` | Photorealistic close-ups |
+| `tag:stop-motion tag:whimsical` | Handcrafted animation |
+| `tag:glitch tag:cyberpunk` | Digital experimental |
 
-### 📸 Hyperrealism
-Photorealistic simulations emphasizing material accuracy and physics.
-
-**Characteristics**:
-- Photorealistic detail
-- Physics accuracy (materials, forces)
-- Natural lighting
-- Real-world plausibility
-
-**Requirements**: Must include `physics` field with materials and forces.
-
-### 🎨 Animation
-Stylized, non-realistic aesthetics using creative animation techniques.
-
-**Characteristics**:
-- Artistic stylization
-- Non-realistic rendering
-- Creative techniques (stop-motion, 2D, etc.)
-- Emphasis on design and style
-
-### 🔬 Experimental
-Boundary-pushing, avant-garde work exploring Sora 2's capabilities.
-
-**Characteristics**:
-- Innovative concepts
-- Surreal or abstract visuals
-- Technical experimentation
-- Unconventional approaches
+**Tag search syntax**: Use GitHub's native search with `tag:tagname` format. Combine multiple tags to narrow results.
 
 ## Schema & Contracts
 

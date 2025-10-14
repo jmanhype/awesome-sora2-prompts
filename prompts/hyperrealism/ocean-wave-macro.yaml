@@ -1,0 +1,63 @@
+title: "Ocean Wave Macro Detail"
+category: hyperrealism
+tags: [hyperrealism, ocean, wave, macro, water, physics, nature, close-up, photorealistic, fluid-dynamics]
+summary: >
+  Extreme macro shot of ocean wave crest about to break, water droplets suspended in air,
+  sunlight refracting through translucent water, foam texture detail,
+  physics-accurate fluid dynamics captured at high frame rate.
+
+prompt: |
+  Subject/Character:
+  Turquoise ocean wave at breaking point, water forming curved crest,
+  spray droplets suspended mid-air catching sunlight, foam bubbles with
+  varying sizes and translucency levels, pristine water clarity.
+
+  Action/Motion:
+  Wave approaching breaking point in slow motion, water curling forward,
+  droplets separating from crest and hanging in air, foam building at base,
+  subtle internal water movement visible through translucent sections.
+
+  Environment/Setting:
+  Open ocean on sunny day, bright natural sunlight from behind wave creating
+  backlit translucent effect, clear blue water, minimal visible horizon,
+  focus entirely on wave detail and immediate water environment.
+
+  Cinematic Framing:
+  Extreme macro shot at wave height, camera positioned at water level,
+  high-speed slow motion capture, locked position tracking with wave movement,
+  shallow depth of field on crest with background blur.
+
+  Aesthetic/Style:
+  Hyperrealistic nature documentary style, natural color saturation,
+  high dynamic range preserving highlight detail in water and foam,
+  crystal clear sharpness on water droplets, professional surf photography aesthetic,
+  emphasis on revealing water physics normally invisible to naked eye.
+
+camera:
+  lens: "100mm macro"
+  movement: "locked position tracking wave, high-speed slow motion"
+  framing: "extreme close-up, shallow depth of field on crest"
+
+physics:
+  materials:
+    - salt water
+    - air bubbles in foam
+    - water vapor
+    - suspended droplets
+  forces:
+    - wave momentum and gravity
+    - surface tension
+    - wind resistance
+    - fluid dynamics
+    - light refraction through water
+
+expected_duration: "4-6 seconds"
+
+author: "ai-video-factory"
+source: "original"
+created: "2025-10-14"
+sora_version: "2.0"
+
+demo_link: "https://youtube.com/watch?v=example-ocean-wave-macro"
+
+nsfw: false

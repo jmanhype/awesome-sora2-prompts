@@ -1,0 +1,51 @@
+title: "Cel-Shaded Samurai Duel"
+category: animation
+tags: [animation, cel-shaded, samurai, action, anime, stylized, bold-linework, combat, dynamic, 3d-animation]
+summary: >
+  Stylized 3D animation of two samurai warriors in dramatic duel stance,
+  cel-shaded rendering with bold black outlines, anime-inspired aesthetic,
+  dynamic camera movement, vibrant color palette with flat shading.
+
+prompt: |
+  Subject/Character:
+  Two samurai warriors in traditional armor, exaggerated proportions typical
+  of anime style, bold black outlines defining all edges, flat color fills
+  with minimal gradients, dramatic facial expressions, detailed katana blades.
+
+  Action/Motion:
+  Dramatic standoff transitioning to quick sword clash, slow motion wind-up
+  followed by rapid strike, cloth and hair flowing with exaggerated physics,
+  speed lines appearing during fast movements, dynamic action poses.
+
+  Environment/Setting:
+  Stylized Japanese courtyard at sunset, cherry blossom petals floating in air,
+  simplified geometric architecture, flat shaded ground with bold shadows,
+  dramatic sky with cel-shaded clouds, minimalist background elements
+  keeping focus on characters.
+
+  Cinematic Framing:
+  Dynamic rotating camera circling combatants, low angle emphasizing heroic poses,
+  quick cuts between wide action shots and close-ups on eyes,
+  rule of thirds composition, anime-style framing conventions.
+
+  Aesthetic/Style:
+  Cel-shaded 3D animation mimicking 2D anime, bold black ink outlines on all forms,
+  flat color fills with hard shadow edges, limited color palette (red, black, gold, blue),
+  no photorealistic textures, stylized highlights as white geometric shapes,
+  anime motion conventions (speed lines, impact frames).
+
+camera:
+  lens: "35mm animation camera"
+  movement: "dynamic rotating orbit around characters, quick cuts"
+  framing: "medium to close-up, low angle, anime composition"
+
+expected_duration: "6-10 seconds"
+
+author: "ai-video-factory"
+source: "original"
+created: "2025-10-14"
+sora_version: "2.0"
+
+demo_link: "https://youtube.com/watch?v=example-cel-shaded-action"
+
+nsfw: false

@@ -1,0 +1,63 @@
+title: "Urban Glass Architecture Reflection"
+category: hyperrealism
+tags: [hyperrealism, architecture, glass, reflection, urban, daylight, modern, geometric, photorealistic, building]
+summary: >
+  Extreme detail shot of modern glass skyscraper facade reflecting clouds and sky,
+  perfect geometric patterns, subtle lens distortion, natural daylight,
+  photorealistic material rendering of glass, steel, and concrete.
+
+prompt: |
+  Subject/Character:
+  Modern glass curtain wall skyscraper facade, floor-to-ceiling windows in perfect grid,
+  polished chrome mullions, subtle imperfections in glass panels,
+  reflections of passing clouds and adjacent buildings.
+
+  Action/Motion:
+  Subtle slow upward tilt revealing building height, clouds moving across
+  reflected sky, slight wind causing minimal glass panel flex,
+  changing light as clouds pass sun.
+
+  Environment/Setting:
+  Downtown urban environment on clear afternoon, strong natural daylight,
+  dramatic cloud formations in blue sky, surrounding glass towers reflecting
+  in subject building, concrete plaza at base.
+
+  Cinematic Framing:
+  Extreme close-up to medium shot showing facade detail, slow upward tilt,
+  locked position with minimal movement, sharp focus throughout,
+  geometric composition emphasizing grid patterns.
+
+  Aesthetic/Style:
+  Photorealistic architectural photography, natural color grading,
+  high dynamic range capturing reflection and glass detail,
+  minimal contrast adjustments, precise geometric rendering,
+  professional real estate photography aesthetic.
+
+camera:
+  lens: "50mm"
+  movement: "slow upward tilt, minimal camera movement"
+  framing: "close-up to medium shot, geometric composition"
+
+physics:
+  materials:
+    - tempered glass panels
+    - polished chrome steel
+    - brushed aluminum
+    - reflective coating
+    - concrete
+  forces:
+    - natural daylight
+    - atmospheric refraction
+    - mirror reflection
+    - surface tension on glass
+
+expected_duration: "6-10 seconds"
+
+author: "ai-video-factory"
+source: "original"
+created: "2025-10-14"
+sora_version: "2.0"
+
+demo_link: "https://youtube.com/watch?v=example-urban-architecture"
+
+nsfw: false

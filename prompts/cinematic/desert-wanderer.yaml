@@ -1,0 +1,51 @@
+title: "Desert Wanderer at Dusk"
+category: cinematic
+tags: [desert, dusk, wanderer, cinematic, wide-shot, silhouette, atmospheric, journey, golden-hour, western]
+summary: >
+  Lone figure walking across vast desert landscape at golden hour,
+  dramatic silhouette against orange sky, dust particles in air,
+  slow wide tracking shot, contemplative mood, epic scale.
+
+prompt: |
+  Subject/Character:
+  Silhouetted lone traveler in tattered cloak carrying weathered backpack,
+  walking staff in hand, slow deliberate pace, dust rising with each step,
+  mysterious identity obscured by backlighting.
+
+  Action/Motion:
+  Walking steadily across desert terrain toward distant mountains,
+  slow methodical pace, occasional pause to survey horizon,
+  cloak billowing gently in desert wind, footprints left in sand.
+
+  Environment/Setting:
+  Vast Sahara-like desert at golden hour, rolling sand dunes extending to horizon,
+  distant mountain silhouettes, scattered rock formations, heat shimmer in distance,
+  dramatic orange and purple sky, sun low on horizon casting long shadows.
+
+  Cinematic Framing:
+  Wide-angle establishing shot, slow lateral tracking at walking pace,
+  figure positioned in lower third of frame emphasizing vast empty sky,
+  extreme depth of field keeping foreground and background sharp,
+  rule of thirds composition.
+
+  Aesthetic/Style:
+  Lawrence of Arabia-inspired epic cinematography, warm golden hour color palette,
+  natural atmospheric haze, high dynamic range capturing sky detail,
+  35mm film grain, painterly quality, emphasis on scale and solitude,
+  contemplative mood.
+
+camera:
+  lens: "35mm"
+  movement: "slow lateral tracking at walking pace, locked horizon"
+  framing: "wide shot, figure in lower third, vast sky emphasized"
+
+expected_duration: "10-15 seconds"
+
+author: "ai-video-factory"
+source: "original"
+created: "2025-10-14"
+sora_version: "2.0"
+
+demo_link: "https://youtube.com/watch?v=example-desert-wanderer"
+
+nsfw: false
