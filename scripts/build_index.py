@@ -70,12 +70,28 @@ def format_tags(tags: List[str]) -> str:
     return " ".join([f"`{tag}`" for tag in tags])
 
 
+def get_performance_badge(prompt_data: Dict) -> str:
+    """Determine performance badge based on metrics."""
+    performance = prompt_data.get('performance', {})
+
+    # 🔥 for retention_3s > 80 (high hook quality)
+    if performance.get('retention_3s', 0) > 80:
+        return "🔥 "
+
+    # ⭐ for completion_rate > 60 (strong overall engagement)
+    if performance.get('completion_rate', 0) > 60:
+        return "⭐ "
+
+    return ""
+
+
 def generate_prompt_entry(prompt_data: Dict, file_name: str) -> str:
     """Generate markdown entry for a single prompt."""
     entry_parts = []
 
-    # Title
-    entry_parts.append(f"### {prompt_data['title']}\n")
+    # Title with performance badge
+    badge = get_performance_badge(prompt_data)
+    entry_parts.append(f"### {badge}{prompt_data['title']}\n")
 
     # Summary
     if 'summary' in prompt_data:
@@ -91,6 +107,19 @@ def generate_prompt_entry(prompt_data: Dict, file_name: str) -> str:
     if 'camera' in prompt_data:
         camera_str = format_camera_details(prompt_data['camera'])
         entry_parts.append(f"**Camera**: {camera_str}\n")
+
+    # Performance metrics (if available)
+    performance = prompt_data.get('performance', {})
+    if performance:
+        perf_parts = []
+        if 'retention_3s' in performance:
+            perf_parts.append(f"3s: {performance['retention_3s']:.1f}%")
+        if 'retention_5s' in performance:
+            perf_parts.append(f"5s: {performance['retention_5s']:.1f}%")
+        if 'completion_rate' in performance:
+            perf_parts.append(f"completion: {performance['completion_rate']:.1f}%")
+        if perf_parts:
+            entry_parts.append(f"**Performance**: {' | '.join(perf_parts)}\n")
 
     # Demo link
     if 'demo_link' in prompt_data:

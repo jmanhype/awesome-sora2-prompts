@@ -66,6 +66,28 @@ We welcome high-quality prompts that advance the community's understanding!
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for complete workflow.
 
+## 🏆 Featured Prompts
+
+Top-performing prompts based on retention and engagement metrics.
+
+> **Performance Scoring**: retention_3s × 0.4 + retention_5s × 0.3 + completion_rate × 0.3
+> 🔥 = 3-second retention > 80% | ⭐ = Completion rate > 60%
+
+Featured prompts are automatically identified by [`scripts/identify_top_performers.py`](scripts/identify_top_performers.py) based on real-world performance data.
+
+*Note: As prompts are tested and performance data is added, this section will automatically populate with top performers. Add `performance` metrics to your prompt YAML files to enable tracking.*
+
+**Example with performance data**:
+```yaml
+performance:
+  retention_3s: 85.5    # % viewers who watched 3+ seconds
+  retention_5s: 72.3    # % viewers who watched 5+ seconds
+  completion_rate: 68.9 # % viewers who watched to end
+  replays: 12           # Number of replays
+```
+
+Run `python scripts/identify_top_performers.py` to generate updated featured prompts list.
+
 ## The Five-Pillar Framework
 
 Every prompt in this repository follows this structure:
