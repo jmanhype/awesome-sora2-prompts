@@ -23,7 +23,7 @@ Scoring Formula:
 import yaml
 import sys
 from pathlib import Path
-from typing import Dict, List, Tuple, Optional
+from typing import Dict, List, Tuple, Optional, Any
 from dataclasses import dataclass
 from datetime import datetime
 
@@ -53,7 +53,7 @@ class PromptPerformance:
             self.weighted_score = 0.0
 
 
-def load_prompt(file_path: Path) -> Optional[Dict]:
+def load_prompt(file_path: Path) -> Optional[Dict[str, Any]]:
     """Load and parse a YAML prompt file."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
@@ -63,7 +63,7 @@ def load_prompt(file_path: Path) -> Optional[Dict]:
         return None
 
 
-def extract_performance(prompt_data: Dict, file_path: Path) -> Optional[PromptPerformance]:
+def extract_performance(prompt_data: Dict[str, Any], file_path: Path) -> Optional[PromptPerformance]:
     """Extract performance data from prompt and create PromptPerformance object."""
     if not prompt_data:
         return None
@@ -230,7 +230,7 @@ def generate_category_breakdown(performances: List[PromptPerformance]) -> str:
     return "\n".join(lines)
 
 
-def main():
+def main() -> None:
     """Main execution function."""
     print("🔍 Identifying Top Performing Prompts...\n")
 

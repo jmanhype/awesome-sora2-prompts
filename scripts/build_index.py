@@ -19,7 +19,7 @@ Features:
 import yaml
 import sys
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Optional, Any, Tuple
 from datetime import datetime
 
 # Category descriptions
@@ -43,7 +43,7 @@ CATEGORY_DESCRIPTIONS = {
 }
 
 
-def load_prompt(file_path: Path) -> Dict:
+def load_prompt(file_path: Path) -> Optional[Dict[str, Any]]:
     """Load and parse a YAML prompt file."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
@@ -53,7 +53,7 @@ def load_prompt(file_path: Path) -> Dict:
         return None
 
 
-def format_camera_details(camera: Dict) -> str:
+def format_camera_details(camera: Dict[str, Any]) -> str:
     """Format camera section as readable string."""
     parts = []
     if 'lens' in camera:
@@ -70,7 +70,7 @@ def format_tags(tags: List[str]) -> str:
     return " ".join([f"`{tag}`" for tag in tags])
 
 
-def get_performance_badge(prompt_data: Dict) -> str:
+def get_performance_badge(prompt_data: Dict[str, Any]) -> str:
     """Determine performance badge based on metrics."""
     performance = prompt_data.get('performance', {})
 
@@ -85,7 +85,7 @@ def get_performance_badge(prompt_data: Dict) -> str:
     return ""
 
 
-def generate_prompt_entry(prompt_data: Dict, file_name: str) -> str:
+def generate_prompt_entry(prompt_data: Dict[str, Any], file_name: str) -> str:
     """Generate markdown entry for a single prompt."""
     entry_parts = []
 
@@ -134,7 +134,7 @@ def generate_prompt_entry(prompt_data: Dict, file_name: str) -> str:
     return "\n".join(entry_parts)
 
 
-def generate_category_readme(category: str, prompts: List[tuple]) -> str:
+def generate_category_readme(category: str, prompts: List[Tuple[Dict[str, Any], str]]) -> Optional[str]:
     """Generate complete README content for a category."""
     if category not in CATEGORY_DESCRIPTIONS:
         print(f"⚠️  Unknown category: {category}", file=sys.stderr)
@@ -164,7 +164,7 @@ def generate_category_readme(category: str, prompts: List[tuple]) -> str:
     return "\n".join(lines)
 
 
-def main():
+def main() -> None:
     """Main execution function."""
     print("🔨 Building category indexes...\n")
 
