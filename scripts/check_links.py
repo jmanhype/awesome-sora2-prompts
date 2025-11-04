@@ -24,7 +24,7 @@ import yaml
 import sys
 import requests
 from pathlib import Path
-from typing import Dict, List, Tuple, Optional
+from typing import Dict, List, Tuple, Optional, Any
 from urllib.parse import urlparse
 from dataclasses import dataclass
 
@@ -54,7 +54,7 @@ class LinkCheckResult:
     platform: Optional[str]
 
 
-def load_prompt(file_path: Path) -> Optional[Dict]:
+def load_prompt(file_path: Path) -> Optional[Dict[str, Any]]:
     """Load and parse a YAML prompt file."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
@@ -219,7 +219,7 @@ def generate_summary(results: List[LinkCheckResult]) -> str:
     return "\n".join(lines)
 
 
-def main():
+def main() -> None:
     """Main execution function."""
     print("🔗 Checking demo video links...\n")
 

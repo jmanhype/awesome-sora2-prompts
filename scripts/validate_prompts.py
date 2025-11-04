@@ -19,7 +19,7 @@ import sys
 import json
 import yaml
 from pathlib import Path
-from typing import List, Dict, Tuple
+from typing import List, Dict, Tuple, Any, Optional
 import jsonschema
 from jsonschema import Draft7Validator, ValidationError
 
@@ -72,7 +72,7 @@ class PromptValidator:
             errors.append(f"[ERROR] {file_path}\nUnexpected error: {e}")
             return False, errors
 
-    def _format_error(self, file_path: Path, error: ValidationError, prompt_data: dict) -> str:
+    def _format_error(self, file_path: Path, error: ValidationError, prompt_data: Dict[str, Any]) -> str:
         """
         Format validation error with custom error messages from schema.
 
@@ -115,9 +115,13 @@ Issue: {error_msg}{constitution_ref}"""
         valid_count = 0
         all_errors = []
 
-        print(f"✓ Validating prompts in: {directory}\n")
+        print(f"✓ Validating {len(yaml_files)} prompts in: {directory}\n")
 
-        for file_path in sorted(yaml_files):
+        for i, file_path in enumerate(sorted(yaml_files), 1):
+            # Show progress for large directories
+            if len(yaml_files) > 5:
+                print(f"[{i}/{len(yaml_files)}] ", end="")
+
             is_valid, errors = self.validate_file(file_path)
 
             if is_valid:
@@ -130,7 +134,7 @@ Issue: {error_msg}{constitution_ref}"""
         return valid_count, len(yaml_files), all_errors
 
 
-def main():
+def main() -> None:
     """Main entry point for validation script."""
     if len(sys.argv) < 2:
         print("Usage: python validate_prompts.py <directory_or_file>")

@@ -6,17 +6,17 @@ Stylized, non-realistic aesthetics using creative animation techniques. Artistic
 
 ---
 
-### Paper Cutout Forest Journey
+### Cel-Shaded Samurai Duel
 
-**Summary**: Stylized paper cutout character walks through layered paper forest scene, flat 2D aesthetic with depth through parallax, vibrant colors, handcrafted stop-motion animation style.
+**Summary**: Stylized 3D animation of two samurai warriors in dramatic duel stance, cel-shaded rendering with bold black outlines, anime-inspired aesthetic, dynamic camera movement, vibrant color palette with flat shading.
 
-**Tags**: `animation` `paper-cutout` `forest` `stylized` `stop-motion` `whimsical` `layered` `craft` `handmade` `colorful`
+**Tags**: `animation` `cel-shaded` `samurai` `action` `anime` `stylized` `bold-linework` `combat` `dynamic` `3d-animation`
 
-**Camera**: 50mm animation camera lens | smooth horizontal tracking, follows character at constant speed, parallax layers moving at different rates | side-view profile, medium shot showing full character, center composition with environment layers
+**Camera**: 35mm animation camera lens | dynamic rotating orbit around characters, quick cuts | medium to close-up, low angle, anime composition
 
-**Demo**: [Watch on YouTube](https://youtube.com/watch?v=example-paper-forest)
+**Demo**: [Watch on YouTube](https://youtube.com/watch?v=example-cel-shaded-action)
 
-**File**: [`paper-cutout-forest.yaml`](paper-cutout-forest.yaml)
+**File**: [`cel-shaded-action.yaml`](cel-shaded-action.yaml)
 
 ---
 
@@ -34,17 +34,17 @@ Stylized, non-realistic aesthetics using creative animation techniques. Artistic
 
 ---
 
-### Cel-Shaded Samurai Duel
+### Paper Cutout Forest Journey
 
-**Summary**: Stylized 3D animation of two samurai warriors in dramatic duel stance, cel-shaded rendering with bold black outlines, anime-inspired aesthetic, dynamic camera movement, vibrant color palette with flat shading.
+**Summary**: Stylized paper cutout character walks through layered paper forest scene, flat 2D aesthetic with depth through parallax, vibrant colors, handcrafted stop-motion animation style.
 
-**Tags**: `animation` `cel-shaded` `samurai` `action` `anime` `stylized` `bold-linework` `combat` `dynamic` `3d-animation`
+**Tags**: `animation` `paper-cutout` `forest` `stylized` `stop-motion` `whimsical` `layered` `craft` `handmade` `colorful`
 
-**Camera**: 35mm animation camera lens | dynamic rotating orbit around characters, quick cuts | medium to close-up, low angle, anime composition
+**Camera**: 50mm animation camera lens | smooth horizontal tracking, follows character at constant speed, parallax layers moving at different rates | side-view profile, medium shot showing full character, center composition with environment layers
 
-**Demo**: [Watch on YouTube](https://youtube.com/watch?v=example-cel-shaded-action)
+**Demo**: [Watch on YouTube](https://youtube.com/watch?v=example-paper-forest)
 
-**File**: [`cel-shaded-action.yaml`](cel-shaded-action.yaml)
+**File**: [`paper-cutout-forest.yaml`](paper-cutout-forest.yaml)
 
 ---
 

@@ -20,20 +20,6 @@ Photorealistic simulations with material accuracy and physics. Natural lighting,
 
 ---
 
-### Ocean Wave Macro Detail
-
-**Summary**: Extreme macro shot of ocean wave crest about to break, water droplets suspended in air, sunlight refracting through translucent water, foam texture detail, physics-accurate fluid dynamics captured at high frame rate.
-
-**Tags**: `hyperrealism` `ocean` `wave` `macro` `water` `physics` `nature` `close-up` `photorealistic` `fluid-dynamics`
-
-**Camera**: 100mm macro lens | locked position tracking wave, high-speed slow motion | extreme close-up, shallow depth of field on crest
-
-**Demo**: [Watch on YouTube](https://youtube.com/watch?v=example-ocean-wave-macro)
-
-**File**: [`ocean-wave-macro.yaml`](ocean-wave-macro.yaml)
-
----
-
 ### Morning Coffee Pour
 
 **Summary**: Extreme close-up of dark coffee being poured into white ceramic mug, steam rising, light refracting through liquid, macro lens capturing every detail in photorealistic quality.
@@ -45,6 +31,20 @@ Photorealistic simulations with material accuracy and physics. Natural lighting,
 **Demo**: [Watch on YouTube](https://youtube.com/watch?v=example-morning-coffee)
 
 **File**: [`morning-coffee.yaml`](morning-coffee.yaml)
+
+---
+
+### Ocean Wave Macro Detail
+
+**Summary**: Extreme macro shot of ocean wave crest about to break, water droplets suspended in air, sunlight refracting through translucent water, foam texture detail, physics-accurate fluid dynamics captured at high frame rate.
+
+**Tags**: `hyperrealism` `ocean` `wave` `macro` `water` `physics` `nature` `close-up` `photorealistic` `fluid-dynamics`
+
+**Camera**: 100mm macro lens | locked position tracking wave, high-speed slow motion | extreme close-up, shallow depth of field on crest
+
+**Demo**: [Watch on YouTube](https://youtube.com/watch?v=example-ocean-wave-macro)
+
+**File**: [`ocean-wave-macro.yaml`](ocean-wave-macro.yaml)
 
 ---
 
