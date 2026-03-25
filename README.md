@@ -1,318 +1,120 @@
-# Awesome Sora 2 Prompts 🎬
+# Awesome Sora 2 Prompts
 
-> A curated collection of high-quality prompts for OpenAI's Sora 2, structured using the Five-Pillar Framework
+A structured collection of prompts for OpenAI's Sora 2 video generation model, organized using the Five-Pillar Framework.
 
-[![Validation](https://github.com/jmanhype/awesome-sora2-prompts/actions/workflows/validate.yml/badge.svg)](https://github.com/jmanhype/awesome-sora2-prompts/actions/workflows/validate.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![GitHub stars](https://img.shields.io/github/stars/jmanhype/awesome-sora2-prompts?style=social)](https://github.com/jmanhype/awesome-sora2-prompts/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/jmanhype/awesome-sora2-prompts?style=social)](https://github.com/jmanhype/awesome-sora2-prompts/network/members)
-[![GitHub watchers](https://img.shields.io/github/watchers/jmanhype/awesome-sora2-prompts?style=social)](https://github.com/jmanhype/awesome-sora2-prompts/watchers)
+## Status
 
-## What is This?
+| Metric | Value |
+|--------|-------|
+| Total prompts | 12 |
+| Categories | 4 (cinematic, hyperrealism, animation, experimental) |
+| Prompt format | YAML with JSON Schema validation |
+| CI validation | GitHub Actions on every PR |
+| License | MIT |
 
-This repository contains **battle-tested Sora 2 prompts** organized by the **Five-Pillar Framework** - a structured approach to prompt engineering that produces consistent, high-quality results.
+## What This Contains
 
-Every prompt includes:
-- ✅ **Working demo video** - Verified Sora 2 output
-- ✅ **Structured framework** - Subject, Action, Environment, Framing, Style
-- ✅ **Camera specifications** - Lens, movement, framing details
-- ✅ **Complete metadata** - Tags, category, attribution
+Each prompt is a YAML file with:
 
-**No theory. No guesses. Only prompts that actually work.**
+- A tested prompt string for Sora 2
+- Camera specifications (lens, movement, framing)
+- Category and tag metadata
+- Optional performance metrics (retention, completion rate)
+- Demo video link (where available)
 
-## Quick Start
+Prompts follow the Five-Pillar Framework: Subject, Action, Environment, Cinematic Framing, Aesthetic/Style.
 
-### 🎯 Using Prompts
+## Categories
 
-1. **Browse by category**:
-   - [`prompts/cinematic/`](prompts/cinematic/) - Narrative-driven scenes
-   - [`prompts/hyperrealism/`](prompts/hyperrealism/) - Photorealistic simulations
-   - [`prompts/animation/`](prompts/animation/) - Stylized aesthetics
-   - [`prompts/experimental/`](prompts/experimental/) - Boundary-pushing work
+| Category | Path | Count | Focus |
+|----------|------|-------|-------|
+| Cinematic | [`prompts/cinematic/`](prompts/cinematic/) | 3 | Narrative-driven scenes, dramatic lighting |
+| Hyperrealism | [`prompts/hyperrealism/`](prompts/hyperrealism/) | 3 | Photorealistic simulation, physics accuracy |
+| Animation | [`prompts/animation/`](prompts/animation/) | 3 | Stylized aesthetics, non-realistic techniques |
+| Experimental | [`prompts/experimental/`](prompts/experimental/) | 3 | Boundary-testing, avant-garde concepts |
 
-2. **Pick a prompt** (example: [`noir-detective.yaml`](prompts/cinematic/noir-detective.yaml))
+## Usage
 
-3. **Copy the `prompt` field** and paste into Sora 2
+1. Browse a category directory
+2. Open any `.yaml` file
+3. Copy the `prompt` field
+4. Paste into Sora 2
 
-4. **Generate!** 🎥
+Example prompt file: [`prompts/cinematic/noir-detective.yaml`](prompts/cinematic/noir-detective.yaml)
 
-### 📚 Learning Prompt Engineering
+## Five-Pillar Framework
 
-**New to prompt writing?** Start here:
-1. Read the [Five-Pillar Framework Guide](guides/five-pillars.md)
-2. Study example prompts in each category
-3. Practice with the framework structure
-4. Generate your own videos
+| Pillar | Question |
+|--------|----------|
+| 1. Subject/Character | Who or what is the focus? |
+| 2. Action/Motion | What movement occurs? |
+| 3. Environment/Setting | Where and when does it happen? |
+| 4. Cinematic Framing | Camera work and composition? |
+| 5. Aesthetic/Style | Visual treatment and mood? |
 
-### 🔍 Search by Tags
+Details: [guides/five-pillars.md](guides/five-pillars.md)
 
-Find prompts by searching tags in the repository:
+## Validation
 
+Every prompt must pass:
+- JSON Schema validation ([`prompt.schema.json`](prompt.schema.json))
+- Five-Pillar structure check
+- Camera specification requirement
+
+```bash
+pip install -r scripts/requirements.txt
+python scripts/validate_prompts.py prompts/
 ```
-tag:noir tag:rain          # Multiple tags
-tag:hyperrealism tag:macro # Category + style
-tag:stop-motion            # Animation technique
-tag:glitch tag:experimental # Experimental effects
-```
 
-Or browse prompts directly in each category directory.
+CI runs validation on all pull requests automatically.
 
-### 🤝 Contributing
+## Performance Tracking
 
-We welcome high-quality prompts that advance the community's understanding!
+Prompts can include optional performance data:
 
-**Requirements**:
-- Follow the Five-Pillar Framework
-- Generate actual Sora 2 video (demo link required)
-- Pass schema validation
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for complete workflow.
-
-## 🏆 Featured Prompts
-
-Top-performing prompts based on retention and engagement metrics.
-
-> **Performance Scoring**: retention_3s × 0.4 + retention_5s × 0.3 + completion_rate × 0.3
-> 🔥 = 3-second retention > 80% | ⭐ = Completion rate > 60%
-
-Featured prompts are automatically identified by [`scripts/identify_top_performers.py`](scripts/identify_top_performers.py) based on real-world performance data.
-
-*Note: As prompts are tested and performance data is added, this section will automatically populate with top performers. Add `performance` metrics to your prompt YAML files to enable tracking.*
-
-**Example with performance data**:
 ```yaml
 performance:
-  retention_3s: 85.5    # % viewers who watched 3+ seconds
-  retention_5s: 72.3    # % viewers who watched 5+ seconds
-  completion_rate: 68.9 # % viewers who watched to end
-  replays: 12           # Number of replays
+  retention_3s: 85.5    # % viewers at 3 seconds
+  retention_5s: 72.3    # % viewers at 5 seconds
+  completion_rate: 68.9  # % viewers who finished
+  replays: 12
 ```
 
-Run `python scripts/identify_top_performers.py` to generate updated featured prompts list.
-
-## The Five-Pillar Framework
-
-Every prompt in this repository follows this structure:
-
-```
-🎭 Pillar 1: Subject/Character
-   Who or what is the focus?
-
-🎬 Pillar 2: Action/Motion
-   What movement occurs?
-
-🌍 Pillar 3: Environment/Setting
-   Where and when does it happen?
-
-📷 Pillar 4: Cinematic Framing
-   Camera work and composition
-
-🎨 Pillar 5: Aesthetic/Style
-   Visual treatment and mood
-```
-
-**Why use this framework?**
-- 🎯 Produces consistent results
-- 📐 Reduces ambiguity
-- 🔄 Enables effective iteration
-- 🎓 Teachable and shareable
-
-Learn more: [Five-Pillar Framework Guide](guides/five-pillars.md)
-
-## Browse by Category
-
-### 🎬 [Cinematic Prompts](prompts/cinematic/)
-Story-driven videos with traditional filmmaking techniques. Character-focused scenes with narrative elements and dramatic lighting.
-
-**Featured Prompts**:
-- **[Noir Detective in Rain](prompts/cinematic/noir-detective.yaml)** - Trench-coated detective walking through rain-slicked streets, 35mm tracking shot, high-contrast noir lighting | [Demo →](https://youtube.com/watch?v=example-noir-detective)
-
-[→ View all cinematic prompts](prompts/cinematic/)
-
----
-
-### 📸 [Hyperrealism Prompts](prompts/hyperrealism/)
-Photorealistic simulations with material accuracy and physics. Natural lighting, real-world plausibility, physics-based rendering.
-
-**Featured Prompts**:
-- **[Morning Coffee Pour](prompts/hyperrealism/morning-coffee.yaml)** - Extreme close-up of coffee pouring into ceramic mug, 100mm macro lens, physics-accurate liquid dynamics | [Demo →](https://youtube.com/watch?v=example-morning-coffee)
-
-[→ View all hyperrealism prompts](prompts/hyperrealism/)
-
----
-
-### 🎨 [Animation Prompts](prompts/animation/)
-Stylized, non-realistic aesthetics using creative animation techniques. Artistic stylization, handcrafted quality, emphasis on design.
-
-**Featured Prompts**:
-- **[Paper Cutout Forest Journey](prompts/animation/paper-cutout-forest.yaml)** - Stylized paper cutout character walking through layered forest, stop-motion aesthetic, parallax scrolling | [Demo →](https://youtube.com/watch?v=example-paper-forest)
-
-[→ View all animation prompts](prompts/animation/)
-
----
-
-### 🔬 [Experimental Prompts](prompts/experimental/)
-Boundary-pushing, avant-garde work exploring Sora 2's capabilities. Innovative concepts, surreal visuals, unconventional approaches.
-
-**Featured Prompts**:
-- **[Digital Data Dissolution](prompts/experimental/data-dissolution.yaml)** - 3D wireframe cityscape dissolving into data particles, glitch effects, vaporwave aesthetic | [Demo →](https://youtube.com/watch?v=example-data-dissolution)
-
-[→ View all experimental prompts](prompts/experimental/)
+Run `python scripts/identify_top_performers.py` to rank prompts by weighted score.
 
 ## Repository Structure
 
 ```
-awesome-sora2-prompts/
-├── prompts/              # All prompts organized by category
-│   ├── cinematic/        # Narrative-driven videos
-│   ├── hyperrealism/     # Photorealistic simulations
-│   ├── animation/        # Stylized aesthetics
-│   └── experimental/     # Avant-garde work
-├── guides/               # Educational resources
-│   └── five-pillars.md   # Framework guide
-├── templates/            # Prompt template
-│   └── PROMPT_TEMPLATE.yaml
-├── scripts/              # Validation tooling
-│   ├── validate_prompts.py
-│   └── requirements.txt
-├── .github/
-│   └── workflows/
-│       └── validate.yml  # CI validation
-├── prompt.schema.json    # JSON Schema for validation
-├── CONTRIBUTING.md       # Contribution guide
-└── README.md             # This file
+prompts/              # YAML prompts by category
+  cinematic/
+  hyperrealism/
+  animation/
+  experimental/
+guides/               # Framework documentation
+  five-pillars.md
+templates/            # Submission template
+scripts/              # Validation and analysis tools
+prompt.schema.json    # JSON Schema Draft 7
 ```
 
-## Validation & Quality
+## Limitations
 
-Every prompt must:
-- ✅ Pass JSON Schema validation
-- ✅ Follow Five-Pillar structure
-- ✅ Include camera specifications
-- ✅ Provide working demo video
-- ✅ Be properly attributed
+- Requires Sora 2 access to generate videos from these prompts.
+- Demo video links may become unavailable as Sora 2 evolves.
+- Performance metrics are self-reported and limited in sample size.
+- The Five-Pillar Framework is opinionated; other prompt structures can also produce good results.
 
-### Run Validation Locally
+## Contributing
 
-```bash
-# Install dependencies
-pip install -r scripts/requirements.txt
+Requirements:
+1. Follow the Five-Pillar Framework
+2. Provide a working Sora 2 demo video link
+3. Pass schema validation
 
-# Validate a prompt
-python scripts/validate_prompts.py prompts/category/prompt-name.yaml
-
-# Validate all prompts
-python scripts/validate_prompts.py prompts/
-```
-
-### CI Validation
-
-All pull requests automatically run validation via GitHub Actions. PRs with validation failures cannot be merged.
-
-## Search by Tags
-
-Find prompts by combining tags:
-
-| Search | Results |
-|--------|---------|
-| `tag:noir tag:rain` | Film noir in rainy scenes |
-| `tag:hyperrealism tag:macro` | Photorealistic close-ups |
-| `tag:stop-motion tag:whimsical` | Handcrafted animation |
-| `tag:glitch tag:cyberpunk` | Digital experimental |
-
-**Tag search syntax**: Use GitHub's native search with `tag:tagname` format. Combine multiple tags to narrow results.
-
-## Schema & Contracts
-
-This repository uses formal specifications to ensure quality:
-
-- **[prompt.schema.json](prompt.schema.json)** - JSON Schema Draft 7 validation
-- **[contracts/prompt-schema-requirements.md](contracts/prompt-schema-requirements.md)** - Schema contract
-- **[contracts/ci-workflow-requirements.md](contracts/ci-workflow-requirements.md)** - CI contract
-
-These contracts define exact requirements and error messages.
-
-## Constitution
-
-This repository follows the **AI Video Factory Constitution**, which establishes:
-
-- **Principle III**: Five-Pillar Framework structure
-- **Principle VI**: Test-First Contribution (demo videos required)
-- **Quality Standards**: Schema validation, attribution, ethics
-
-See the constitution in the project documentation.
-
-## Tools & Resources
-
-### Validation
-- Python 3.11+
-- jsonschema 4.19.2
-- PyYAML 6.0.1
-
-### Sora 2 Access
-This repository is for users with Sora 2 access. Prompts are designed for OpenAI's Sora 2 model.
-
-### Additional Resources
-- [Five-Pillar Framework Guide](guides/five-pillars.md)
-- [Contribution Guidelines](CONTRIBUTING.md)
-- [Pull Request Template](.github/pull_request_template.md)
-
-## Community
-
-### Get Involved
-
-- 🐛 **Found an issue?** [Open an issue](../../issues)
-- 💡 **Have an idea?** Start a discussion
-- 🎬 **Created a great prompt?** Submit a PR
-- 📚 **Want to learn?** Read the guides
-
-### Recognition
-
-Contributors who submit quality prompts are recognized in repository credits and community highlights.
-
-## FAQ
-
-**Q: Do I need Sora 2 access to contribute?**
-A: Yes, you must be able to generate actual Sora 2 videos to include required demo links.
-
-**Q: Can I submit prompts from other sources?**
-A: Yes, but you must provide proper attribution. Set `source` field to the original URL.
-
-**Q: What if my prompt fails validation?**
-A: Read the error messages - they include specific guidance. See [CONTRIBUTING.md](CONTRIBUTING.md) for help.
-
-**Q: Can I submit NSFW content?**
-A: Only with maintainer pre-approval. Open an issue first to discuss.
-
-**Q: How do I format camera specifications?**
-A: See the [Five-Pillar Framework Guide](guides/five-pillars.md) for detailed camera guidance.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full workflow.
 
 ## License
 
-MIT License - See [LICENSE](LICENSE) for details.
+MIT -- see [LICENSE](LICENSE).
 
-Prompts are contributed by the community. Individual prompts may have additional attribution requirements specified in their `source` field.
-
-## Credits
-
-Created by the AI Video Factory community.
-
-**Core Contributors**:
-- Repository structure and validation system
-- Five-Pillar Framework design
-- Initial seed prompts
-
-**Community Contributors**:
-- See [Contributors](../../graphs/contributors) page
-
-## Support
-
-- 📖 **Documentation**: [guides/](guides/)
-- 💬 **Discussions**: GitHub Discussions
-- 🐛 **Bug Reports**: [GitHub Issues](../../issues)
-- 📧 **Contact**: [Open an issue](../../issues/new)
-
----
-
-**Ready to create?** Start with the [Five-Pillar Framework Guide](guides/five-pillars.md)! 🎬
+Individual prompts may have additional attribution requirements specified in their `source` field.
